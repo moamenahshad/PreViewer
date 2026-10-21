@@ -1,5 +1,7 @@
 # Preview UI Architecture Study — macOS 26.7.1
 
+> Historical UI study. Current architecture and validation are maintained in [`Documentation/preview-study.md`](../preview-study.md) and [`Documentation/testing.md`](../testing.md).
+
 ## Scope and target identity
 
 Read-only static inspection of `/System/Applications/Preview.app`, version 11.0, build 1113.5.3. The application declares macOS 26.7 as its minimum and was built against Apple's internal macOS 26.7 SDK. The inspected universal executable has SHA-256 `db13f63838230a80bbdcee98913df71731cbc8417a625438c68be54943108c3c`; analysis selected x86_64.

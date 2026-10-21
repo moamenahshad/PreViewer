@@ -1,68 +1,460 @@
 // !$*UTF8*$!
-{ archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
-E3E65F000E9DD4E0F5EBFB98 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tests/DjVuTests.swift"; sourceTree = SOURCE_ROOT; };
-A6B159333A620615F799B1E5 = { isa = PBXBuildFile; fileRef = E3E65F000E9DD4E0F5EBFB98; };
-724B4D72B267BFBEE99D47AB = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Conversion/DjVuToPDFConverter.swift"; sourceTree = SOURCE_ROOT; };
-8C8E426B6CC5B2B5336861DD = { isa = PBXBuildFile; fileRef = 724B4D72B267BFBEE99D47AB; };
-C461BD372BCA7D30F49E0415 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Conversion/DjVuToPDFWindowController.swift"; sourceTree = SOURCE_ROOT; };
-EEA8C845BDCDDAF2130DC1BE = { isa = PBXBuildFile; fileRef = C461BD372BCA7D30F49E0415; };
-D00000000000000000000001 = { isa = PBXShellScriptBuildPhase; buildActionMask = 2147483647; files = (); inputPaths = (); outputPaths = (); runOnlyForDeploymentPostprocessing = 0; shellPath = /bin/sh; shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"; cp \"$SRCROOT/Vendor/DjVuLibre/\"*.dylib \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/\"; mkdir -p \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Licenses\"; cp \"$SRCROOT/Vendor/DjVuLibre/\"*.md \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Licenses/\"; cp \"$SRCROOT/PreViewer.png\" \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/PreViewer.png\""; };
-A741C7932B00F971E8787838 = { isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Sources/DjVu/DjVuBridge.m"; sourceTree = SOURCE_ROOT; };
-24E7989377ADDF362AFA3444 = { isa = PBXBuildFile; fileRef = A741C7932B00F971E8787838; };
-1FF2C9F084295F41B10F1FE4 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/DjVu/DjVuDocumentBackend.swift"; sourceTree = SOURCE_ROOT; };
-0C44D109A13031651D6BDC27 = { isa = PBXBuildFile; fileRef = 1FF2C9F084295F41B10F1FE4; };
-962B1EB7E5359381657208FB = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/DjVu/DjVuCanvas.swift"; sourceTree = SOURCE_ROOT; };
-570D30527D7792F4B14FD15C = { isa = PBXBuildFile; fileRef = 962B1EB7E5359381657208FB; };
-82F42FC8C58F357D6422FBDC = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/DjVu/DjVuSearchBar.swift"; sourceTree = SOURCE_ROOT; };
-01FF5177FA234000AA3CBB16 = { isa = PBXBuildFile; fileRef = 82F42FC8C58F357D6422FBDC; };
-D108F3EA311A72F7458DA309 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/UI/WelcomeWindow.swift"; sourceTree = SOURCE_ROOT; };
-2CC28E1F650F77697D825D81 = { isa = PBXBuildFile; fileRef = D108F3EA311A72F7458DA309; };
-74ACB2AB73570A6C966C4E05 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Documents/ViewerDocumentController.swift"; sourceTree = SOURCE_ROOT; };
-A022F33D5AA9537E6998B452 = { isa = PBXBuildFile; fileRef = 74ACB2AB73570A6C966C4E05; };
-164B1865FDA0A03ABDE5C064 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/App/DjVuPreviewApp.swift"; sourceTree = SOURCE_ROOT; };
-E640FB272AF73AAD9899D8C0 = { isa = PBXBuildFile; fileRef = 164B1865FDA0A03ABDE5C064; };
-E23AE83D3C967EF3449515C4 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Documents/DocumentSession.swift"; sourceTree = SOURCE_ROOT; };
-0B4CCB19E27CAC0BCBD3EC6C = { isa = PBXBuildFile; fileRef = E23AE83D3C967EF3449515C4; };
-CB446821B0D25A3CA219DDF3 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Documents/ViewerDocument.swift"; sourceTree = SOURCE_ROOT; };
-E5E785BF9650BB644882AEB7 = { isa = PBXBuildFile; fileRef = CB446821B0D25A3CA219DDF3; };
-BE9651CB7871220AC4404B54 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Navigation/PageNavigation.swift"; sourceTree = SOURCE_ROOT; };
-8897615B15DC8C31C4DBA798 = { isa = PBXBuildFile; fileRef = BE9651CB7871220AC4404B54; };
-71EAA11EFD46355F9D62B1A9 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Rendering/PDFCanvas.swift"; sourceTree = SOURCE_ROOT; };
-088C5C53787AEA925D4354D2 = { isa = PBXBuildFile; fileRef = 71EAA11EFD46355F9D62B1A9; };
-A1FB1B143B3CA70956EEF921 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Rendering/ThumbnailStore.swift"; sourceTree = SOURCE_ROOT; };
-A23BB483DA9C29B977D21C8F = { isa = PBXBuildFile; fileRef = A1FB1B143B3CA70956EEF921; };
-BC2B36A92611A0AC79415B15 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Search/PDFSearchController.swift"; sourceTree = SOURCE_ROOT; };
-B6ABCDFD1491C27CA281F87A = { isa = PBXBuildFile; fileRef = BC2B36A92611A0AC79415B15; };
-94457AA65E94546FB97D590C = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/UI/SearchBar.swift"; sourceTree = SOURCE_ROOT; };
-972FF4851E4E2ECD159D223A = { isa = PBXBuildFile; fileRef = 94457AA65E94546FB97D590C; };
-F114BE865659DAB8A971ABFD = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/UI/ThumbnailSidebar.swift"; sourceTree = SOURCE_ROOT; };
-8464AB6F717D8AE7753F6D98 = { isa = PBXBuildFile; fileRef = F114BE865659DAB8A971ABFD; };
-DE5FFED4CAA8E832CFCEB349 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/UI/ViewerContentView.swift"; sourceTree = SOURCE_ROOT; };
-8A81052BDEBFAE002348B4D6 = { isa = PBXBuildFile; fileRef = DE5FFED4CAA8E832CFCEB349; };
-68EAAB4F5988C67D7B3D2A66 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/UI/ViewerWindowController.swift"; sourceTree = SOURCE_ROOT; };
-02ED5B4121E80198C206BD61 = { isa = PBXBuildFile; fileRef = 68EAAB4F5988C67D7B3D2A66; };
-AEAE4B28CDFF08F590396BA5 = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/ViewerTests.swift; sourceTree = SOURCE_ROOT; };
-80FAC02A0BD5812E2A00F339 = { isa = PBXBuildFile; fileRef = AEAE4B28CDFF08F590396BA5; };
-C5E87F721E3C0B6150A65092 = { isa = PBXFileReference; explicitFileType = wrapper.application; path = "DjVu Preview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-91251B722F603F5400AD371C = { isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = DjVuPreviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-FBDC4F23F93125BBEEAE800C = { isa = PBXGroup; children = (C5E87F721E3C0B6150A65092, 91251B722F603F5400AD371C,); name = Products; sourceTree = "<group>"; };
-B28B7AF69320201D1CF206EB = { isa = PBXGroup; children = (E3E65F000E9DD4E0F5EBFB98,724B4D72B267BFBEE99D47AB,C461BD372BCA7D30F49E0415,A741C7932B00F971E8787838,1FF2C9F084295F41B10F1FE4,962B1EB7E5359381657208FB,82F42FC8C58F357D6422FBDC,D108F3EA311A72F7458DA309,74ACB2AB73570A6C966C4E05,164B1865FDA0A03ABDE5C064,E23AE83D3C967EF3449515C4,CB446821B0D25A3CA219DDF3,BE9651CB7871220AC4404B54,71EAA11EFD46355F9D62B1A9,A1FB1B143B3CA70956EEF921,BC2B36A92611A0AC79415B15,94457AA65E94546FB97D590C,F114BE865659DAB8A971ABFD,DE5FFED4CAA8E832CFCEB349,68EAAB4F5988C67D7B3D2A66,AEAE4B28CDFF08F590396BA5,FBDC4F23F93125BBEEAE800C,); sourceTree = "<group>"; };
-BCE16DD0260827ECF338C787 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (8C8E426B6CC5B2B5336861DD,EEA8C845BDCDDAF2130DC1BE,24E7989377ADDF362AFA3444,0C44D109A13031651D6BDC27,570D30527D7792F4B14FD15C,01FF5177FA234000AA3CBB16,2CC28E1F650F77697D825D81,A022F33D5AA9537E6998B452,E640FB272AF73AAD9899D8C0,0B4CCB19E27CAC0BCBD3EC6C,E5E785BF9650BB644882AEB7,8897615B15DC8C31C4DBA798,088C5C53787AEA925D4354D2,A23BB483DA9C29B977D21C8F,B6ABCDFD1491C27CA281F87A,972FF4851E4E2ECD159D223A,8464AB6F717D8AE7753F6D98,8A81052BDEBFAE002348B4D6,02ED5B4121E80198C206BD61,); runOnlyForDeploymentPostprocessing = 0; };
-9F3002A5D69B22D357A58AA9 = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A6B159333A620615F799B1E5,80FAC02A0BD5812E2A00F339,); runOnlyForDeploymentPostprocessing = 0; };
-7561BFB015D8F536760CB671 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
-99C7943D90D870A50ADE9160 = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
-89E1FD6268CC0F221A2BE178 = { isa = XCBuildConfiguration; buildSettings = { ARCHS = "x86_64"; SWIFT_COMPILATION_MODE = "singlefile"; SWIFT_ENABLE_BATCH_MODE = "NO"; SDKROOT = "macosx"; MACOSX_DEPLOYMENT_TARGET = "26.0"; SWIFT_VERSION = "6.0"; SWIFT_STRICT_CONCURRENCY = "complete"; CLANG_ENABLE_MODULES = "YES"; CLANG_ENABLE_OBJC_ARC = "YES"; CODE_SIGN_STYLE = "Automatic"; ENABLE_HARDENED_RUNTIME = "YES"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; DEBUG_INFORMATION_FORMAT = "dwarf"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG"; }; name = Debug; };
-E6DE6C99132752C914FEF632 = { isa = XCBuildConfiguration; buildSettings = { ARCHS = "x86_64"; SWIFT_COMPILATION_MODE = "singlefile"; SWIFT_ENABLE_BATCH_MODE = "NO"; SDKROOT = "macosx"; MACOSX_DEPLOYMENT_TARGET = "26.0"; SWIFT_VERSION = "6.0"; SWIFT_STRICT_CONCURRENCY = "complete"; CLANG_ENABLE_MODULES = "YES"; CLANG_ENABLE_OBJC_ARC = "YES"; CODE_SIGN_STYLE = "Automatic"; ENABLE_HARDENED_RUNTIME = "YES"; SWIFT_OPTIMIZATION_LEVEL = "-O"; DEBUG_INFORMATION_FORMAT = "dwarf"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = ""; }; name = Release; };
-FBD3510CED826C9DAA696E48 = { isa = XCConfigurationList; buildConfigurations = (89E1FD6268CC0F221A2BE178,E6DE6C99132752C914FEF632,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-E9B2E96ABC5F6856F2BE79CF = { isa = XCBuildConfiguration; buildSettings = { ARCHS = "x86_64"; SWIFT_COMPILATION_MODE = "singlefile"; SWIFT_ENABLE_BATCH_MODE = "NO"; SDKROOT = "macosx"; MACOSX_DEPLOYMENT_TARGET = "26.0"; SWIFT_VERSION = "6.0"; SWIFT_STRICT_CONCURRENCY = "complete"; CLANG_ENABLE_MODULES = "YES"; CLANG_ENABLE_OBJC_ARC = "YES"; CODE_SIGN_STYLE = "Automatic"; ENABLE_HARDENED_RUNTIME = "YES"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; DEBUG_INFORMATION_FORMAT = "dwarf"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG"; PRODUCT_NAME = "PreViewer"; PRODUCT_MODULE_NAME = "DjVuPreview"; PRODUCT_BUNDLE_IDENTIFIER = "com.independent.previewer"; INFOPLIST_FILE = "Info.plist"; ENABLE_TESTABILITY = "YES"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; SWIFT_OBJC_BRIDGING_HEADER = "Sources/DjVu/DjVuBridge.h"; HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/DjVuLibre/include"; LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Vendor/DjVuLibre"; OTHER_LDFLAGS = "$(inherited) -ldjvulibre"; ASSETCATALOG_COMPILER_APPICON_NAME = ""; }; name = Debug; };
-5A8C91857F674E16E2724F47 = { isa = XCBuildConfiguration; buildSettings = { ARCHS = "x86_64"; SWIFT_COMPILATION_MODE = "singlefile"; SWIFT_ENABLE_BATCH_MODE = "NO"; SDKROOT = "macosx"; MACOSX_DEPLOYMENT_TARGET = "26.0"; SWIFT_VERSION = "6.0"; SWIFT_STRICT_CONCURRENCY = "complete"; CLANG_ENABLE_MODULES = "YES"; CLANG_ENABLE_OBJC_ARC = "YES"; CODE_SIGN_STYLE = "Automatic"; ENABLE_HARDENED_RUNTIME = "YES"; SWIFT_OPTIMIZATION_LEVEL = "-O"; DEBUG_INFORMATION_FORMAT = "dwarf"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = ""; PRODUCT_NAME = "PreViewer"; PRODUCT_MODULE_NAME = "DjVuPreview"; PRODUCT_BUNDLE_IDENTIFIER = "com.independent.previewer"; INFOPLIST_FILE = "Info.plist"; ENABLE_TESTABILITY = "YES"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks"; SWIFT_OBJC_BRIDGING_HEADER = "Sources/DjVu/DjVuBridge.h"; HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/DjVuLibre/include"; LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Vendor/DjVuLibre"; OTHER_LDFLAGS = "$(inherited) -ldjvulibre"; ASSETCATALOG_COMPILER_APPICON_NAME = ""; }; name = Release; };
-3ADB3100893F0122E432328D = { isa = XCConfigurationList; buildConfigurations = (E9B2E96ABC5F6856F2BE79CF,5A8C91857F674E16E2724F47,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-FCB48D8F88BCDB0ED9FADFD7 = { isa = XCBuildConfiguration; buildSettings = { ARCHS = "x86_64"; SWIFT_COMPILATION_MODE = "singlefile"; SWIFT_ENABLE_BATCH_MODE = "NO"; SDKROOT = "macosx"; MACOSX_DEPLOYMENT_TARGET = "26.0"; SWIFT_VERSION = "6.0"; SWIFT_STRICT_CONCURRENCY = "complete"; CLANG_ENABLE_MODULES = "YES"; CLANG_ENABLE_OBJC_ARC = "YES"; CODE_SIGN_STYLE = "Automatic"; ENABLE_HARDENED_RUNTIME = "YES"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; DEBUG_INFORMATION_FORMAT = "dwarf"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG"; PRODUCT_NAME = "DjVuPreviewTests"; PRODUCT_BUNDLE_IDENTIFIER = "com.independent.djvupreview.tests"; GENERATE_INFOPLIST_FILE = "YES"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PreViewer.app/Contents/MacOS/PreViewer"; BUNDLE_LOADER = "$(TEST_HOST)"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks"; }; name = Debug; };
-942EEBBACD6C88CAE7F29B29 = { isa = XCBuildConfiguration; buildSettings = { ARCHS = "x86_64"; SWIFT_COMPILATION_MODE = "singlefile"; SWIFT_ENABLE_BATCH_MODE = "NO"; SDKROOT = "macosx"; MACOSX_DEPLOYMENT_TARGET = "26.0"; SWIFT_VERSION = "6.0"; SWIFT_STRICT_CONCURRENCY = "complete"; CLANG_ENABLE_MODULES = "YES"; CLANG_ENABLE_OBJC_ARC = "YES"; ENABLE_HARDENED_RUNTIME = "YES"; PRODUCT_NAME = "DjVuPreviewTests"; PRODUCT_BUNDLE_IDENTIFIER = "com.independent.djvupreview.tests"; GENERATE_INFOPLIST_FILE = "YES"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PreViewer.app/Contents/MacOS/PreViewer"; BUNDLE_LOADER = "$(TEST_HOST)"; LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks"; }; name = Release; };
-57950A58A4374066B2AF45DD = { isa = XCConfigurationList; buildConfigurations = (FCB48D8F88BCDB0ED9FADFD7,942EEBBACD6C88CAE7F29B29,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
-D799BAE6088A90139B415FCC = { isa = PBXContainerItemProxy; containerPortal = F9A0DBEC4C4BA2CFB1097853; proxyType = 1; remoteGlobalIDString = 4F6027D858B72CC70E5CC8E9; remoteInfo = "DjVu Preview"; };
-DE58E2B17C19600779694943 = { isa = PBXTargetDependency; target = 4F6027D858B72CC70E5CC8E9; targetProxy = D799BAE6088A90139B415FCC; };
-4F6027D858B72CC70E5CC8E9 = { isa = PBXNativeTarget; buildConfigurationList = 3ADB3100893F0122E432328D; buildPhases = (BCE16DD0260827ECF338C787,7561BFB015D8F536760CB671,D00000000000000000000001,); buildRules = (); dependencies = (); name = "DjVu Preview"; productName = "DjVu Preview"; productReference = C5E87F721E3C0B6150A65092; productType = "com.apple.product-type.application"; };
-0A06C5E2DA34E686D888A695 = { isa = PBXNativeTarget; buildConfigurationList = 57950A58A4374066B2AF45DD; buildPhases = (9F3002A5D69B22D357A58AA9,99C7943D90D870A50ADE9160,); buildRules = (); dependencies = (DE58E2B17C19600779694943,); name = DjVuPreviewTests; productName = DjVuPreviewTests; productReference = 91251B722F603F5400AD371C; productType = "com.apple.product-type.bundle.unit-test"; };
-F9A0DBEC4C4BA2CFB1097853 = { isa = PBXProject; attributes = { LastUpgradeCheck = 2650; }; buildConfigurationList = FBD3510CED826C9DAA696E48; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,Base,); mainGroup = B28B7AF69320201D1CF206EB; productRefGroup = FBDC4F23F93125BBEEAE800C; projectDirPath = ""; projectRoot = ""; targets = (4F6027D858B72CC70E5CC8E9,0A06C5E2DA34E686D888A695,); };
-}; rootObject = F9A0DBEC4C4BA2CFB1097853; }
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01FF5177FA234000AA3CBB16 /* Sources/DjVu/DjVuSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F42FC8C58F357D6422FBDC /* Sources/DjVu/DjVuSearchBar.swift */; };
+		02ED5B4121E80198C206BD61 /* Sources/UI/ViewerWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EAAB4F5988C67D7B3D2A66 /* Sources/UI/ViewerWindowController.swift */; };
+		088C5C53787AEA925D4354D2 /* Sources/Rendering/PDFCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EAA11EFD46355F9D62B1A9 /* Sources/Rendering/PDFCanvas.swift */; };
+		0B4CCB19E27CAC0BCBD3EC6C /* Sources/Documents/DocumentSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23AE83D3C967EF3449515C4 /* Sources/Documents/DocumentSession.swift */; };
+		0C44D109A13031651D6BDC27 /* Sources/DjVu/DjVuDocumentBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FF2C9F084295F41B10F1FE4 /* Sources/DjVu/DjVuDocumentBackend.swift */; };
+		24E7989377ADDF362AFA3444 /* Sources/DjVu/DjVuBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A741C7932B00F971E8787838 /* Sources/DjVu/DjVuBridge.m */; };
+		2CC28E1F650F77697D825D81 /* Sources/UI/WelcomeWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D108F3EA311A72F7458DA309 /* Sources/UI/WelcomeWindow.swift */; };
+		570D30527D7792F4B14FD15C /* Sources/DjVu/DjVuCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962B1EB7E5359381657208FB /* Sources/DjVu/DjVuCanvas.swift */; };
+		80FAC02A0BD5812E2A00F339 /* Tests/ViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE4B28CDFF08F590396BA5 /* Tests/ViewerTests.swift */; };
+		8464AB6F717D8AE7753F6D98 /* Sources/UI/ThumbnailSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F114BE865659DAB8A971ABFD /* Sources/UI/ThumbnailSidebar.swift */; };
+		8897615B15DC8C31C4DBA798 /* Sources/Navigation/PageNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9651CB7871220AC4404B54 /* Sources/Navigation/PageNavigation.swift */; };
+		8A81052BDEBFAE002348B4D6 /* Sources/UI/ViewerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5FFED4CAA8E832CFCEB349 /* Sources/UI/ViewerContentView.swift */; };
+		8C8E426B6CC5B2B5336861DD /* Sources/Conversion/DjVuToPDFConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B4D72B267BFBEE99D47AB /* Sources/Conversion/DjVuToPDFConverter.swift */; };
+		972FF4851E4E2ECD159D223A /* Sources/UI/SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94457AA65E94546FB97D590C /* Sources/UI/SearchBar.swift */; };
+		A022F33D5AA9537E6998B452 /* Sources/Documents/ViewerDocumentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ACB2AB73570A6C966C4E05 /* Sources/Documents/ViewerDocumentController.swift */; };
+		A23BB483DA9C29B977D21C8F /* Sources/Rendering/ThumbnailStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FB1B143B3CA70956EEF921 /* Sources/Rendering/ThumbnailStore.swift */; };
+		A6B159333A620615F799B1E5 /* Tests/DjVuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E65F000E9DD4E0F5EBFB98 /* Tests/DjVuTests.swift */; };
+		B6ABCDFD1491C27CA281F87A /* Sources/Search/PDFSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B36A92611A0AC79415B15 /* Sources/Search/PDFSearchController.swift */; };
+		E5E785BF9650BB644882AEB7 /* Sources/Documents/ViewerDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB446821B0D25A3CA219DDF3 /* Sources/Documents/ViewerDocument.swift */; };
+		E640FB272AF73AAD9899D8C0 /* Sources/App/DjVuPreviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164B1865FDA0A03ABDE5C064 /* Sources/App/DjVuPreviewApp.swift */; };
+		EEA8C845BDCDDAF2130DC1BE /* Sources/Conversion/DjVuToPDFWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461BD372BCA7D30F49E0415 /* Sources/Conversion/DjVuToPDFWindowController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D799BAE6088A90139B415FCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9A0DBEC4C4BA2CFB1097853 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F6027D858B72CC70E5CC8E9;
+			remoteInfo = "DjVu Preview";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		164B1865FDA0A03ABDE5C064 /* Sources/App/DjVuPreviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/DjVuPreviewApp.swift; sourceTree = SOURCE_ROOT; };
+		1FF2C9F084295F41B10F1FE4 /* Sources/DjVu/DjVuDocumentBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/DjVu/DjVuDocumentBackend.swift; sourceTree = SOURCE_ROOT; };
+		68EAAB4F5988C67D7B3D2A66 /* Sources/UI/ViewerWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/UI/ViewerWindowController.swift; sourceTree = SOURCE_ROOT; };
+		71EAA11EFD46355F9D62B1A9 /* Sources/Rendering/PDFCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Rendering/PDFCanvas.swift; sourceTree = SOURCE_ROOT; };
+		724B4D72B267BFBEE99D47AB /* Sources/Conversion/DjVuToPDFConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Conversion/DjVuToPDFConverter.swift; sourceTree = SOURCE_ROOT; };
+		74ACB2AB73570A6C966C4E05 /* Sources/Documents/ViewerDocumentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Documents/ViewerDocumentController.swift; sourceTree = SOURCE_ROOT; };
+		82F42FC8C58F357D6422FBDC /* Sources/DjVu/DjVuSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/DjVu/DjVuSearchBar.swift; sourceTree = SOURCE_ROOT; };
+		91251B722F603F5400AD371C /* DjVuPreviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = DjVuPreviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94457AA65E94546FB97D590C /* Sources/UI/SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/UI/SearchBar.swift; sourceTree = SOURCE_ROOT; };
+		962B1EB7E5359381657208FB /* Sources/DjVu/DjVuCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/DjVu/DjVuCanvas.swift; sourceTree = SOURCE_ROOT; };
+		A1FB1B143B3CA70956EEF921 /* Sources/Rendering/ThumbnailStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Rendering/ThumbnailStore.swift; sourceTree = SOURCE_ROOT; };
+		A741C7932B00F971E8787838 /* Sources/DjVu/DjVuBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sources/DjVu/DjVuBridge.m; sourceTree = SOURCE_ROOT; };
+		AEAE4B28CDFF08F590396BA5 /* Tests/ViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/ViewerTests.swift; sourceTree = SOURCE_ROOT; };
+		BC2B36A92611A0AC79415B15 /* Sources/Search/PDFSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Search/PDFSearchController.swift; sourceTree = SOURCE_ROOT; };
+		BE9651CB7871220AC4404B54 /* Sources/Navigation/PageNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Navigation/PageNavigation.swift; sourceTree = SOURCE_ROOT; };
+		C461BD372BCA7D30F49E0415 /* Sources/Conversion/DjVuToPDFWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Conversion/DjVuToPDFWindowController.swift; sourceTree = SOURCE_ROOT; };
+		C5E87F721E3C0B6150A65092 /* PreViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = PreViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB446821B0D25A3CA219DDF3 /* Sources/Documents/ViewerDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Documents/ViewerDocument.swift; sourceTree = SOURCE_ROOT; };
+		D108F3EA311A72F7458DA309 /* Sources/UI/WelcomeWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/UI/WelcomeWindow.swift; sourceTree = SOURCE_ROOT; };
+		DE5FFED4CAA8E832CFCEB349 /* Sources/UI/ViewerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/UI/ViewerContentView.swift; sourceTree = SOURCE_ROOT; };
+		E23AE83D3C967EF3449515C4 /* Sources/Documents/DocumentSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Documents/DocumentSession.swift; sourceTree = SOURCE_ROOT; };
+		E3E65F000E9DD4E0F5EBFB98 /* Tests/DjVuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/DjVuTests.swift; sourceTree = SOURCE_ROOT; };
+		F114BE865659DAB8A971ABFD /* Sources/UI/ThumbnailSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/UI/ThumbnailSidebar.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7561BFB015D8F536760CB671 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99C7943D90D870A50ADE9160 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B28B7AF69320201D1CF206EB = {
+			isa = PBXGroup;
+			children = (
+				E3E65F000E9DD4E0F5EBFB98 /* Tests/DjVuTests.swift */,
+				724B4D72B267BFBEE99D47AB /* Sources/Conversion/DjVuToPDFConverter.swift */,
+				C461BD372BCA7D30F49E0415 /* Sources/Conversion/DjVuToPDFWindowController.swift */,
+				A741C7932B00F971E8787838 /* Sources/DjVu/DjVuBridge.m */,
+				1FF2C9F084295F41B10F1FE4 /* Sources/DjVu/DjVuDocumentBackend.swift */,
+				962B1EB7E5359381657208FB /* Sources/DjVu/DjVuCanvas.swift */,
+				82F42FC8C58F357D6422FBDC /* Sources/DjVu/DjVuSearchBar.swift */,
+				D108F3EA311A72F7458DA309 /* Sources/UI/WelcomeWindow.swift */,
+				74ACB2AB73570A6C966C4E05 /* Sources/Documents/ViewerDocumentController.swift */,
+				164B1865FDA0A03ABDE5C064 /* Sources/App/DjVuPreviewApp.swift */,
+				E23AE83D3C967EF3449515C4 /* Sources/Documents/DocumentSession.swift */,
+				CB446821B0D25A3CA219DDF3 /* Sources/Documents/ViewerDocument.swift */,
+				BE9651CB7871220AC4404B54 /* Sources/Navigation/PageNavigation.swift */,
+				71EAA11EFD46355F9D62B1A9 /* Sources/Rendering/PDFCanvas.swift */,
+				A1FB1B143B3CA70956EEF921 /* Sources/Rendering/ThumbnailStore.swift */,
+				BC2B36A92611A0AC79415B15 /* Sources/Search/PDFSearchController.swift */,
+				94457AA65E94546FB97D590C /* Sources/UI/SearchBar.swift */,
+				F114BE865659DAB8A971ABFD /* Sources/UI/ThumbnailSidebar.swift */,
+				DE5FFED4CAA8E832CFCEB349 /* Sources/UI/ViewerContentView.swift */,
+				68EAAB4F5988C67D7B3D2A66 /* Sources/UI/ViewerWindowController.swift */,
+				AEAE4B28CDFF08F590396BA5 /* Tests/ViewerTests.swift */,
+				FBDC4F23F93125BBEEAE800C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FBDC4F23F93125BBEEAE800C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5E87F721E3C0B6150A65092 /* PreViewer.app */,
+				91251B722F603F5400AD371C /* DjVuPreviewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A06C5E2DA34E686D888A695 /* DjVuPreviewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57950A58A4374066B2AF45DD /* Build configuration list for PBXNativeTarget "DjVuPreviewTests" */;
+			buildPhases = (
+				9F3002A5D69B22D357A58AA9 /* Sources */,
+				99C7943D90D870A50ADE9160 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE58E2B17C19600779694943 /* PBXTargetDependency */,
+			);
+			name = DjVuPreviewTests;
+			productName = DjVuPreviewTests;
+			productReference = 91251B722F603F5400AD371C /* DjVuPreviewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F6027D858B72CC70E5CC8E9 /* DjVu Preview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ADB3100893F0122E432328D /* Build configuration list for PBXNativeTarget "DjVu Preview" */;
+			buildPhases = (
+				BCE16DD0260827ECF338C787 /* Sources */,
+				7561BFB015D8F536760CB671 /* Frameworks */,
+				D00000000000000000000001 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DjVu Preview";
+			productName = "DjVu Preview";
+			productReference = C5E87F721E3C0B6150A65092 /* PreViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9A0DBEC4C4BA2CFB1097853 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 2650;
+			};
+			buildConfigurationList = FBD3510CED826C9DAA696E48 /* Build configuration list for PBXProject "DjVu Preview" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B28B7AF69320201D1CF206EB;
+			productRefGroup = FBDC4F23F93125BBEEAE800C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F6027D858B72CC70E5CC8E9 /* DjVu Preview */,
+				0A06C5E2DA34E686D888A695 /* DjVuPreviewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D00000000000000000000001 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"; cp \"$SRCROOT/Vendor/DjVuLibre/\"*.dylib \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/\"; mkdir -p \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Licenses\"; cp \"$SRCROOT/Vendor/DjVuLibre/\"*.md \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Licenses/\"; cp \"$SRCROOT/PreViewer.png\" \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/PreViewer.png\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F3002A5D69B22D357A58AA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B159333A620615F799B1E5 /* Tests/DjVuTests.swift in Sources */,
+				80FAC02A0BD5812E2A00F339 /* Tests/ViewerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCE16DD0260827ECF338C787 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C8E426B6CC5B2B5336861DD /* Sources/Conversion/DjVuToPDFConverter.swift in Sources */,
+				EEA8C845BDCDDAF2130DC1BE /* Sources/Conversion/DjVuToPDFWindowController.swift in Sources */,
+				24E7989377ADDF362AFA3444 /* Sources/DjVu/DjVuBridge.m in Sources */,
+				0C44D109A13031651D6BDC27 /* Sources/DjVu/DjVuDocumentBackend.swift in Sources */,
+				570D30527D7792F4B14FD15C /* Sources/DjVu/DjVuCanvas.swift in Sources */,
+				01FF5177FA234000AA3CBB16 /* Sources/DjVu/DjVuSearchBar.swift in Sources */,
+				2CC28E1F650F77697D825D81 /* Sources/UI/WelcomeWindow.swift in Sources */,
+				A022F33D5AA9537E6998B452 /* Sources/Documents/ViewerDocumentController.swift in Sources */,
+				E640FB272AF73AAD9899D8C0 /* Sources/App/DjVuPreviewApp.swift in Sources */,
+				0B4CCB19E27CAC0BCBD3EC6C /* Sources/Documents/DocumentSession.swift in Sources */,
+				E5E785BF9650BB644882AEB7 /* Sources/Documents/ViewerDocument.swift in Sources */,
+				8897615B15DC8C31C4DBA798 /* Sources/Navigation/PageNavigation.swift in Sources */,
+				088C5C53787AEA925D4354D2 /* Sources/Rendering/PDFCanvas.swift in Sources */,
+				A23BB483DA9C29B977D21C8F /* Sources/Rendering/ThumbnailStore.swift in Sources */,
+				B6ABCDFD1491C27CA281F87A /* Sources/Search/PDFSearchController.swift in Sources */,
+				972FF4851E4E2ECD159D223A /* Sources/UI/SearchBar.swift in Sources */,
+				8464AB6F717D8AE7753F6D98 /* Sources/UI/ThumbnailSidebar.swift in Sources */,
+				8A81052BDEBFAE002348B4D6 /* Sources/UI/ViewerContentView.swift in Sources */,
+				02ED5B4121E80198C206BD61 /* Sources/UI/ViewerWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE58E2B17C19600779694943 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F6027D858B72CC70E5CC8E9 /* DjVu Preview */;
+			targetProxy = D799BAE6088A90139B415FCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5A8C91857F674E16E2724F47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Z62THTZTKU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_TESTABILITY = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/DjVuLibre/include";
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PreViewer;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Vendor/DjVuLibre";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ldjvulibre",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.moamenahshad.previewer;
+				PRODUCT_MODULE_NAME = DjVuPreview;
+				PRODUCT_NAME = PreViewer;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/DjVu/DjVuBridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		89E1FD6268CC0F221A2BE178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		942EEBBACD6C88CAE7F29B29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.independent.djvupreview.tests;
+				PRODUCT_NAME = DjVuPreviewTests;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PreViewer.app/Contents/MacOS/PreViewer";
+			};
+			name = Release;
+		};
+		E6DE6C99132752C914FEF632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		E9B2E96ABC5F6856F2BE79CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = Z62THTZTKU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_TESTABILITY = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Vendor/DjVuLibre/include";
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PreViewer;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/Vendor/DjVuLibre";
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ldjvulibre",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.moamenahshad.previewer;
+				PRODUCT_MODULE_NAME = DjVuPreview;
+				PRODUCT_NAME = PreViewer;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = Sources/DjVu/DjVuBridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		FCB48D8F88BCDB0ED9FADFD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.independent.djvupreview.tests;
+				PRODUCT_NAME = DjVuPreviewTests;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_ENABLE_BATCH_MODE = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PreViewer.app/Contents/MacOS/PreViewer";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3ADB3100893F0122E432328D /* Build configuration list for PBXNativeTarget "DjVu Preview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9B2E96ABC5F6856F2BE79CF /* Debug */,
+				5A8C91857F674E16E2724F47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57950A58A4374066B2AF45DD /* Build configuration list for PBXNativeTarget "DjVuPreviewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCB48D8F88BCDB0ED9FADFD7 /* Debug */,
+				942EEBBACD6C88CAE7F29B29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBD3510CED826C9DAA696E48 /* Build configuration list for PBXProject "DjVu Preview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89E1FD6268CC0F221A2BE178 /* Debug */,
+				E6DE6C99132752C914FEF632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9A0DBEC4C4BA2CFB1097853 /* Project object */;
+}

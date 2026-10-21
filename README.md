@@ -1,6 +1,6 @@
-# DjVu Preview
+# PreViewer
 
-Independent native macOS document viewer using Swift 6, AppKit, SwiftUI and PDFKit, with a separate DjVuLibre backend for DjVu reading and DjVu-to-PDF export. No proprietary converter or Apple Preview resources/code are included.
+PreViewer is an independent native macOS document viewer using Swift 6, AppKit, SwiftUI and PDFKit, with a separate DjVuLibre backend for DjVu reading and DjVu-to-PDF export. No proprietary converter or Apple Preview resources or code are included.
 
 ## Requirements and build
 
@@ -16,7 +16,7 @@ xcodebuild -project 'DjVu Preview.xcodeproj' -scheme 'DjVu Preview' \
   -derivedDataPath Build -jobs 1 -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO test
 ```
 
-Open `Build/Build/Products/Debug/DjVu Preview.app`, or run the DjVu Preview scheme in Xcode. Tests must be allowed to contact macOS testmanagerd.
+The built product is `Build/Build/Products/Debug/PreViewer.app`. The Xcode project and scheme retain the historical name `DjVu Preview`; this is an internal project label, while the product and bundle display name are `PreViewer`.
 
 ## Reader
 
@@ -30,7 +30,7 @@ With a DjVu document active, choose File > Export (Shift-Command-E). The dedicat
 
 JPEG scalar quality is 0.55 for Smaller File and 0.82 for Balanced. Maximum Quality preserves the decoded raster losslessly. Bilevel rasters use one-bit grayscale/Flate at every quality. Layers are composited, not exported as MRC. Original/300/150 DPI settings cap resolution at source DPI without upscaling. Existing word-zone text is emitted as an invisible CoreText PDF text layer; no OCR is performed. Numeric page outlines and supported metadata fields are preserved where available.
 
-See [DjVu validation and limitations](Documentation/DjVu/REPORT.md) and [dependency notices](Vendor/DjVuLibre/NOTICE.md). DjVuLibre is GPL-2.0-or-later: distribution requires a GPL-compatible combined application and compliance with corresponding-source obligations. This milestone does not select the application's license or prepare a signed public release. Production signing/notarization and source distribution remain release work.
+See the [architecture](Documentation/architecture.md), [testing guide](Documentation/testing.md), [DjVu notes](Documentation/djvu.md), [limitations](Documentation/limitations.md), and [dependency notices](Vendor/DjVuLibre/NOTICE.md). DjVuLibre is GPL-2.0-or-later: distribution requires a GPL-compatible combined application and compliance with corresponding-source obligations. The application has no selected root license yet; see [licensing](Documentation/licensing.md). Production signing, notarization, and source distribution remain release work.
 
 ## Shortcuts
 
@@ -45,4 +45,4 @@ See [DjVu validation and limitations](Documentation/DjVu/REPORT.md) and [depende
 | DjVu Export | Shift-Command-E |
 | Full Screen | Control-Command-F |
 
-Password-protected PDFs requiring unlock remain unsupported. PDF-to-DjVu, OCR and MRC encoding are not implemented. Earlier UI/welcome/toolbar studies are under Documentation; their milestone-specific limitations may have been superseded by this implementation.
+Password-protected PDFs requiring unlock remain unsupported. PDF-to-DjVu, OCR, annotations, editing, and MRC encoding are not implemented. Earlier UI, welcome, and toolbar studies are retained under Documentation as research history; current behavior is described by the documents linked above.

@@ -13,10 +13,10 @@ On this Mac, both `.djvu` and `.djv` resolve preferentially to `com.lizardtech.d
 
 ## Verification
 
-Intel build succeeded. All 21 tests passed with no failures. The added regression test presents the real NSOpenPanel, checks the resulting allowedContentTypes against actual resource types for `.djvu` and a copied `.djv`, verifies all installed DjVu associations, and ensures PDF remains allowed without broadly admitting public.data/public.item.
+Historical snapshot: the Intel build succeeded and 21 tests passed at that milestone. The current suite is documented in `Documentation/testing.md`. The added regression test presents the real NSOpenPanel, checks the resulting allowedContentTypes against actual resource types for `.djvu` and a copied `.djv`, verifies all installed DjVu associations, and ensures PDF remains allowed without broadly admitting public.data/public.item.
 
 A fresh application instance was also exercised through File > Open and the system Go to Folder/File field. Selecting the project-owned `generated.djvu` fixture enabled Open; pressing it opened a three-page DjVu document. See open-panel-smoke.log. The file-selection validation helper is outside the application target and changes no clipboard contents or source documents.
 
 Changed runtime files: Info.plist and Sources/Documents/ViewerDocumentController.swift. Added regression coverage in Tests/DjVuTests.swift; validation helpers/records are in this directory.
 
-Previously running instances retain old code until restarted. Use the app at Build/Build/Products/Debug/DjVu Preview.app after restarting the previous instance.
+Previously running instances retain old code until restarted. For the current product, use `Build/Build/Products/Debug/PreViewer.app` after restarting the previous instance. The surrounding log is retained as historical investigation material.

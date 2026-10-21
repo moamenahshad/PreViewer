@@ -15,7 +15,7 @@ The previous launch handler and File > New Window action called `NSDocumentContr
 
 ## Welcome UI
 
-Native SwiftUI/AppKit views show the application icon, requested title/subtitle, prominent Open Document button, PDF file-drop support, recent file icons/names/dates, empty state, and a small capability footer. The capability footer accurately states that PDF is implemented and DjVu/conversion are future work.
+Native SwiftUI/AppKit views show the application icon, requested title/subtitle, prominent Open Document button, PDF/DjVu file-drop support, recent file icons/names/dates, empty state, and a small capability footer. The capability footer describes the current PDF and DjVu viewer and DjVu-to-PDF export.
 
 ## Recent files
 
@@ -25,11 +25,11 @@ The local history contains at most 20 file URLs, last-opened dates, and ordinary
 
 Native recent entries predating our own timestamp tracking display “Previously opened.” No file-modification date is invented as a last-opened date. Existing timestamp-only history migrates to the new model.
 
-Only PDF opens are supported in this milestone. DjVu support and conversion remain deferred.
+PDF and DjVu opens are supported. PDF-to-DjVu, OCR, annotations, and editing remain deferred.
 
 ## Verification
 
-The Intel Debug build and all 11 XCTest tests passed. See `tests.log` for the final run and `welcome.png` for the actual selected-window screenshot. Tests exercise:
+The Intel Debug build and the current 22 XCTest tests pass. See `Documentation/testing.md` for reproducible commands and `welcome.png` for the historical selected-window screenshot. Tests exercise:
 
 - Existing PDF navigation, search, toolbar, and sidebar behavior.
 - Reusing one welcome window without creating empty documents.

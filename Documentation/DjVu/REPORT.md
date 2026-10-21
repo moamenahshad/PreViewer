@@ -1,5 +1,7 @@
 # Direct DjVu reading and DjVu-to-PDF export
 
+> Historical investigation report. Current supported behavior and test results are maintained in [`Documentation/djvu.md`](../djvu.md) and [`Documentation/testing.md`](../testing.md).
+
 ## Implementation
 
 The app now opens `.djvu` and `.djv` through NSDocument, File > Open, Finder events, the welcome/recent-document UI and URL drops. A small signature check precedes asynchronous DjVu header loading. The reader does not convert DjVu to PDF. DjVuLibre decodes visible pages into a dedicated AppKit scroll canvas. Source word zones support rectangular selection/copying and a search that navigates matching pages. A Contents/Thumbnails sidebar exposes supported source outlines. PDF rendering/search continue using the existing PDFKit path.

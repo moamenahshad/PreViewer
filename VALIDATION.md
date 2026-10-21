@@ -1,4 +1,4 @@
-# Validation — 2026-10-21
+# Validation — 2026-10-22
 
 ## Environment
 
@@ -10,19 +10,18 @@
 ## Executed checks
 
 - `xcodebuild ... build`: passed for the Intel Debug application.
-- `xcodebuild ... test`: six XCTest tests passed, zero failures, including after the final search-focus and menu changes.
+- `xcodebuild ... test`: 22 XCTest tests passed, zero failures (13 viewer tests and 9 DjVu tests).
 - Tests compile and link the final application as their host.
 - Tests initially could not reach `com.apple.testmanagerd.control` from the execution sandbox. The authorized run outside the sandbox completed successfully.
-- Build and test command output is retained in `Documentation/build.log` and `Documentation/tests.log`.
+- The reproducible commands and current coverage are maintained in `Documentation/testing.md`. Historical logs remain under `Documentation/`.
 
 ### Test coverage
 
-1. Page input validation, first/last bounds, and empty page counts.
-2. PDFKit canvas navigation and current-page synchronization.
-3. Real asynchronous PDF text search and result navigation wrapping.
-4. Replacing a pending query and canceling its old debounce.
-5. Loading a generated PDF through NSDocument and creating its window and native toolbar.
-6. Enforcing bounded search-result retention at the delegate boundary.
+1. PDF page bounds, opening, navigation, search, result wrapping, and bounded result retention.
+2. Native toolbar/sidebar sizing, appearances, and document-window creation.
+3. Welcome, recent-document, direct-launch, failed-open, and missing-file behavior.
+4. DjVu validation, metadata, page information, word zones, outlines, rendering, cancellation, rotation, and corrupt input.
+5. DjVu-to-PDF export page counts, searchable text, quality/resolution settings, cleanup, and bilevel output.
 
 Fixtures are generated from CoreGraphics/CoreText. The document-loading test creates and removes only its own UUID-named temporary directory.
 
@@ -36,16 +35,16 @@ Fixtures are generated from CoreGraphics/CoreText. The document-loading test cre
 - Rotated pages, mixed page sizes, unusual fonts, Arabic/RTL selection/search, malformed files, and permissions-restricted documents.
 - Accessibility with VoiceOver and keyboard-only navigation.
 
-PDFKit emits system diagnostic messages during the tests, including graphics request compiler messages; the six assertions-based tests still pass. These tests do not constitute visual UI or large-document performance validation.
+PDFKit and SwiftUI emit known system graphics and AttributeGraph diagnostics during the tests; all 22 assertions-based tests pass. These tests do not constitute large-document performance validation.
 
 ## Deliberate milestone limitations
 
-Password-protected PDFs requiring unlock are rejected. No editing, saving, export, OCR, DjVu decoding, or document conversion is implemented. PDFKit's internal caches are not capped by the application's 16 MiB thumbnail cache limit. Initial document parsing is synchronous on the main actor and should be profiled against large/pathological PDFs before release. Code signing, notarization, release packaging, and non-Intel builds are not validated.
+Password-protected PDFs requiring unlock are rejected. PDF-to-DjVu, OCR, annotations, editing, and PDF page manipulation are not implemented. Code signing, notarization, release packaging, and non-Intel builds are not validated.
 
 ## Preview UI follow-up
 
-See `Documentation/UIStudy/REPORT.md` for the subsequent native toolbar/sidebar changes and rendered validation. The updated Intel build and six tests passed after the final changes. Selected-window dark-mode screenshots were inspected for Preview and DjVu Preview using the same generated PDF. Manual light-mode, accessibility preference, precise animation timing, and performance checks remain outstanding. The latest logs are in `Documentation/UIStudy/tests.log`.
+See `Documentation/UIStudy/REPORT.md` for the subsequent native toolbar/sidebar changes and rendered validation. The updated Intel build and 22 tests pass after the current changes. Selected-window screenshots and UI studies remain historical evidence; precise animation timing, accessibility, and large-document performance checks remain outstanding. The latest historical logs are in `Documentation/UIStudy/tests.log`.
 
 ## Welcome startup follow-up
 
-The standalone welcome lifecycle and bounded recent-file history are documented in `Documentation/Welcome/README.md`. The updated suite contains 11 tests, including real PDF opening, persistence, and bookmark resolution after renaming a generated fixture. Live bare launch, direct document launch, dismissal on open, return on native close, and the rendered recent list were checked. No empty NSDocument is requested. See `Documentation/Welcome/tests.log` for the latest build/test result.
+The standalone welcome lifecycle and bounded recent-file history are documented in `Documentation/Welcome/README.md`. The current suite contains 22 tests, including real PDF and DjVu opening, persistence, export, bookmark behavior, and the explicit Command-N Welcome action. No empty NSDocument is requested. See `Documentation/testing.md` for the current build/test result.

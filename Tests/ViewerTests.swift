@@ -188,6 +188,27 @@ final class ViewerTests: XCTestCase {
         document.close()
     }
 
+    func testWelcomeShortcutClosesDocumentAndShowsWelcome() async throws {
+        let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let url = directory.appendingPathComponent("shortcut.pdf")
+        XCTAssertTrue(try fixture(pages: 1).write(to: url))
+        let controller = try XCTUnwrap(NSDocumentController.shared as? ViewerDocumentController)
+        controller.isTerminating = false
+        controller.welcomeController?.close()
+        let document = try ViewerDocument(contentsOf: url, ofType: "com.adobe.pdf")
+        controller.addDocument(document)
+        XCTAssertEqual(controller.documents.count, 1)
+        controller.welcomeShortcut(nil)
+        try await Task.sleep(for: .milliseconds(120))
+        XCTAssertTrue(controller.documents.isEmpty)
+        XCTAssertTrue(controller.welcomeController?.window?.isVisible == true)
+        controller.welcomeController?.close()
+        controller.isTerminating = true
+        document.close()
+    }
+
     func testFileLaunchOpensDirectlyAndRecordsRecentDate() async throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
