@@ -1,0 +1,2 @@
+n/Users/moamen/Documents/REA APPS/DjVu Preview/Build/Build/Products/Debug/DjVu Preview.app/Contents/Frameworks/libjpeg.8.dylib
+n/Users/moamen/Documents/REA APPS/DjVu Preview/Build/Build/Products/Debug/DjVu Preview.app/Contents/Frameworks/libdjvulibre.21.dylib

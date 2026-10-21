@@ -1,0 +1,46 @@
+{
+  "devicesAndConfigurations" : [
+    {
+      "device" : {
+        "architecture" : "x86_64",
+        "deviceId" : "D6FE6AD1-75B1-5CE7-AB9F-D8D32D98CB72",
+        "deviceName" : "My Mac",
+        "modelName" : "iMac",
+        "osBuildNumber" : "25G241",
+        "osVersion" : "26.7.1",
+        "platform" : "macOS"
+      },
+      "expectedFailures" : 0,
+      "failedTests" : 0,
+      "passedTests" : 20,
+      "skippedTests" : 0,
+      "testPlanConfiguration" : {
+        "configurationId" : "1",
+        "configurationName" : "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription" : "DjVu Preview · Built with macOS 26.7.1",
+  "expectedFailures" : 0,
+  "failedTests" : 0,
+  "finishTime" : 1792593466.79,
+  "passedTests" : 20,
+  "result" : "Passed",
+  "skippedTests" : 0,
+  "startTime" : 1792593385.348,
+  "statistics" : [
+
+  ],
+  "testFailures" : [
+
+  ],
+  "title" : "Test - DjVu Preview",
+  "topInsights" : [
+    {
+      "category" : "Longest Test Runs",
+      "impact" : "46% of duration",
+      "text" : "1 longest test run with outlier durations exceeding 25.25s (three standard deviations)"
+    }
+  ],
+  "totalTestCount" : 20
+}

@@ -1,0 +1,1572 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project "DjVu Preview/DjVu Preview.xcodeproj" -scheme "DjVu Preview" -configuration Debug -derivedDataPath "DjVu Preview/Build" -destination platform=macOS,arch=x86_64 -jobs 1 -parallel-testing-enabled NO CODE_SIGNING_ALLOWED=NO test
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Build Preparation
+Build task concurrency set to 1 via user default IDEBuildOperationMaxNumberOfConcurrentCompileTasks
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+warning: Building targets in manual order is deprecated - choose Dependency Order in scheme settings instead, or set DISABLE_MANUAL_TARGET_ORDER_BUILD_WARNING in any of the targets in the current scheme to suppress this warning
+note: Target dependency graph (2 targets)
+    Target 'DjVuPreviewTests' in project 'DjVu Preview'
+        ➜ Explicit dependency on target 'DjVu Preview' in project 'DjVu Preview'
+    Target 'DjVu Preview' in project 'DjVu Preview' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 65032ccf586a4c63d21966a817c363c6
+Build description path: /Users/moamen/Documents/REA APPS/DjVu Preview/Build/Build/Intermediates.noindex/XCBuildData/65032ccf586a4c63d21966a817c363c6.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/DjVu\ Preview.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -o /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+
+note: Disabling hardened runtime with ad-hoc codesigning. (in target 'DjVu Preview' from project 'DjVu Preview')
+CopySwiftLibs /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app (in target 'DjVu Preview' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/MacOS/DjVu\ Preview.debug.dylib --scan-folder /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/Frameworks --scan-folder /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns --scan-folder /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/Library/SystemExtensions --scan-folder /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/Extensions --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVu\ Preview.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+ProcessInfoPlistFile /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/Info.plist /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Info.plist (in target 'DjVu Preview' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    builtin-infoPlistUtility /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/Info.plist
+
+SwiftDriver DjVuPreviewTests normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name DjVuPreviewTests -Onone @/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target x86_64-apple-macos14.0 -g -module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Index.noindex/DataStore -swift-version 6 -I /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -parse-as-library -c -j4 -disable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex -sdk-module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-generated-files.hmap -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-own-target-headers.hmap -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-project-headers.hmap -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/include -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DerivedSources-normal/x86_64 -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DerivedSources/x86_64 -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests-Swift.h -working-directory /Users/moamen/Documents/REA\ APPS/DjVu\ Preview -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal x86_64 Emitting\ module\ for\ DjVuPreviewTests (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+
+SwiftCompile normal x86_64 /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Tests/ViewerTests.swift (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    
+
+SwiftCompile normal x86_64 Compiling\ ViewerTests.swift /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Tests/ViewerTests.swift (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+
+SwiftCompile normal x86_64 /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Tests/ViewerTests.swift (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    
+
+SwiftDriverJobDiscovery normal x86_64 Emitting module for DjVuPreviewTests (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+
+SwiftDriver\ Compilation\ Requirements DjVuPreviewTests normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name DjVuPreviewTests -Onone @/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target x86_64-apple-macos14.0 -g -module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Index.noindex/DataStore -swift-version 6 -I /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -parse-as-library -c -j4 -disable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex -sdk-module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-generated-files.hmap -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-own-target-headers.hmap -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-project-headers.hmap -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/include -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DerivedSources-normal/x86_64 -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DerivedSources/x86_64 -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests-Swift.h -working-directory /Users/moamen/Documents/REA\ APPS/DjVu\ Preview -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal x86_64 Compiling ViewerTests.swift (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+
+SwiftDriver\ Compilation DjVuPreviewTests normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name DjVuPreviewTests -Onone @/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target x86_64-apple-macos14.0 -g -module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Index.noindex/DataStore -swift-version 6 -I /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -parse-as-library -c -j4 -disable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex -sdk-module-cache-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-generated-files.hmap -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-own-target-headers.hmap -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests-project-headers.hmap -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/include -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DerivedSources-normal/x86_64 -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DerivedSources/x86_64 -Xcc -I/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests-Swift.h -working-directory /Users/moamen/Documents/REA\ APPS/DjVu\ Preview -experimental-emit-module-separately -disable-cmo
+
+Copy /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVuPreviewTests.swiftmodule/Project/x86_64-apple-macos.swiftsourceinfo /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.swiftsourceinfo (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.swiftsourceinfo /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVuPreviewTests.swiftmodule/Project/x86_64-apple-macos.swiftsourceinfo
+
+Copy /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVuPreviewTests.swiftmodule/x86_64-apple-macos.abi.json /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.abi.json (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.abi.json /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVuPreviewTests.swiftmodule/x86_64-apple-macos.abi.json
+
+Ld /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/MacOS/DjVuPreviewTests normal (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-macos14.0 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -Os -L/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -filelist /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -rpath -Xlinker @executable_path/../Frameworks -bundle_loader /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/MacOS/DjVu\ Preview -Xlinker -object_path_lto -Xlinker /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests_lto.o -Xlinker -dependency_info -Xlinker /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.swiftmodule @/Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests-linker-args.resp -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/MacOS/DjVu\ Preview.debug.dylib -o /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/MacOS/DjVuPreviewTests
+
+ExtractAppIntentsMetadata (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name DjVuPreviewTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk --xcode-version 17F42 --platform-family macOS --deployment-target 14.0 --bundle-identifier com.independent.djvupreview.tests --output /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/Resources --target-triple x86_64-apple-macos14.0 --binary-file /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/MacOS/DjVuPreviewTests --dependency-file /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests_dependency_info.dat --stringsdata-file /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.SwiftFileList --metadata-file-list /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests.DependencyMetadataFileList --static-metadata-file-list /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/DjVuPreviewTests.DependencyStaticMetadataFileList --swift-const-vals-list /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/Objects-normal/x86_64/DjVuPreviewTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-10-21 13:25:38.773 appintentsmetadataprocessor[62837:330880] Starting appintentsmetadataprocessor export
+2026-10-21 13:25:38.791 appintentsmetadataprocessor[62837:330880] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+CopySwiftLibs /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/MacOS/DjVuPreviewTests --scan-folder /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/Frameworks --scan-folder /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/PlugIns --scan-folder /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/Library/SystemExtensions --scan-folder /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/Extensions --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+ProcessInfoPlistFile /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/Info.plist /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/empty-DjVuPreviewTests.plist (in target 'DjVuPreviewTests' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    builtin-infoPlistUtility /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Intermediates.noindex/DjVu\ Preview.build/Debug/DjVuPreviewTests.build/empty-DjVuPreviewTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -platform macosx -o /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app/Contents/PlugIns/DjVuPreviewTests.xctest/Contents/Info.plist
+
+Validate /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app (in target 'DjVu Preview' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    builtin-validationUtility /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+RegisterWithLaunchServices /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app (in target 'DjVu Preview' from project 'DjVu Preview')
+    cd /Users/moamen/Documents/REA\ APPS/DjVu\ Preview
+    /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted /Users/moamen/Documents/REA\ APPS/DjVu\ Preview/Build/Build/Products/Debug/DjVu\ Preview.app
+
+2026-10-21 13:25:39.997139+0200 DjVu Preview[62843:330989] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-21 13:25:39.997652+0200 DjVu Preview[62843:330989] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-21 13:25:39.997959+0200 DjVu Preview[62843:330990] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-21 13:25:39.998094+0200 DjVu Preview[62843:330990] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-21 13:25:40.001758+0200 DjVu Preview[62843:330989] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-21 13:25:40.001806+0200 DjVu Preview[62843:330989] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-21 13:25:40.003279+0200 DjVu Preview[62843:330989] [Connection] Will NOT re-try to establish the connection
+2026-10-21 13:25:40.003640+0200 DjVu Preview[62843:330990] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-21 13:25:40.003717+0200 DjVu Preview[62843:330990] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-21 13:25:40.113025+0200 DjVu Preview[62843:330973] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/by/3j8ms23929l_qrg30l1t9w9m0000gn/T/com.independent.djvupreview.savedState
+Test Suite 'All tests' started at 2026-10-21 13:25:40.998.
+Test Suite 'DjVuPreviewTests.xctest' started at 2026-10-21 13:25:40.999.
+Test Suite 'ViewerTests' started at 2026-10-21 13:25:40.999.
+Test Case '-[DjVuPreviewTests.ViewerTests testDocumentLoadingAndNativeToolbar]' started.
+2026-10-21 13:25:41.346155+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:41.346576+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:41.346821+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:41.347083+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:41.347230+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:41.347351+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+Test Case '-[DjVuPreviewTests.ViewerTests testDocumentLoadingAndNativeToolbar]' passed (0.736 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testFailedOpenRestoresWelcomeWithoutRecordingDate]' started.
+Test Case '-[DjVuPreviewTests.ViewerTests testFailedOpenRestoresWelcomeWithoutRecordingDate]' passed (0.163 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testFileLaunchOpensDirectlyAndRecordsRecentDate]' started.
+2026-10-21 13:25:41.925913+0200 DjVu Preview[62843:331129] [logging-persist] cannot open file at line 51044 of [f0ca7bba1c]
+2026-10-21 13:25:41.925941+0200 DjVu Preview[62843:331129] [logging-persist] os_unix.c:51044: (2) open(/private/var/db/DetachedSignatures) - No such file or directory
+2026-10-21 13:25:41.926932+0200 DjVu Preview[62843:331129] [logging-persist] cannot open file at line 51044 of [f0ca7bba1c]
+2026-10-21 13:25:41.926983+0200 DjVu Preview[62843:331129] [logging-persist] os_unix.c:51044: (2) open(/private/var/db/DetachedSignatures) - No such file or directory
+2026-10-21 13:25:41.929935+0200 DjVu Preview[62843:331129] [default] Insert failed for list identifier com.apple.LSSharedFileList.ApplicationRecentDocuments Error: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list"
+2026-10-21 13:25:41.958985+0200 DjVu Preview[62843:330988] Compiler failed to build request
+2026-10-21 13:25:41.987362+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.031004+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.083795+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.107310+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.109954+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:42.110264+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:42.110485+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:42.110745+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:42.110933+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:42.111069+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:42.136850+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.164950+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.204515+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.236692+0200 DjVu Preview[62843:331130] [logging-persist] cannot open file at line 51044 of [f0ca7bba1c]
+2026-10-21 13:25:42.236730+0200 DjVu Preview[62843:331130] [logging-persist] os_unix.c:51044: (2) open(/private/var/db/DetachedSignatures) - No such file or directory
+2026-10-21 13:25:42.239058+0200 DjVu Preview[62843:331130] [default] Insert failed for list identifier com.apple.LSSharedFileList.ApplicationRecentDocuments Error: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list"
+2026-10-21 13:25:42.247864+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.270335+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.292658+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.320742+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.347962+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.369899+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.399388+0200 DjVu Preview[62843:330999] [scoped] Scoped bookmarks can only be created for existing files or directories
+2026-10-21 13:25:42.400677+0200 DjVu Preview[62843:330999] [default] Insert failed for list identifier com.apple.LSSharedFileList.ApplicationRecentDocuments Error: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list"
+2026-10-21 13:25:42.401175+0200 DjVu Preview[62843:331129] [documentPredictor] -[ATXFileIdentity initWithItemURL:] Unable to create bookmark data for file URL file:///var/folders/by/3j8ms23929l_qrg30l1t9w9m0000gn/T/A6F115D7-E51F-45F8-9C64-1A7F0C24845C/direct.pdf because of error Error Domain=NSCocoaErrorDomain Code=260 "The file couldn’t be opened because it doesn’t exist.".
+2026-10-21 13:25:42.401563+0200 DjVu Preview[62843:330999] [default] Insert failed for list identifier com.apple.LSSharedFileList.RecentDocuments Error: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list"
+2026-10-21 13:25:42.403060+0200 DjVu Preview[62843:331137] Compiler failed to build request
+Test Case '-[DjVuPreviewTests.ViewerTests testFileLaunchOpensDirectlyAndRecordsRecentDate]' passed (0.515 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testMissingRecentDocumentHasNoInventedLastOpenedDate]' started.
+Test Case '-[DjVuPreviewTests.ViewerTests testMissingRecentDocumentHasNoInventedLastOpenedDate]' passed (0.001 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testPageNavigationBounds]' started.
+Test Case '-[DjVuPreviewTests.ViewerTests testPageNavigationBounds]' passed (0.002 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testPDFSessionAndPageNavigation]' started.
+Test Case '-[DjVuPreviewTests.ViewerTests testPDFSessionAndPageNavigation]' passed (0.062 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testReplacingSearchCancelsOldQuery]' started.
+2026-10-21 13:25:42.495527+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.587050+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.609489+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.632234+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.676963+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.703374+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.724222+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.747008+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.769869+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.792193+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.813655+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.835092+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.866039+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.935654+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:42.935882+0200 DjVu Preview[62843:331125] Compiler failed to build request
+2026-10-21 13:25:42.961516+0200 DjVu Preview[62843:331164] Compiler failed to build request
+Test Case '-[DjVuPreviewTests.ViewerTests testReplacingSearchCancelsOldQuery]' passed (0.478 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testSearchFindsSelectableTextAndWraps]' started.
+2026-10-21 13:25:42.962648+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:42.988876+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:42.993100+0200 DjVu Preview[62843:331125] Compiler failed to build request
+2026-10-21 13:25:43.012650+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:43.017091+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:43.034419+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:43.043131+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:43.057989+0200 DjVu Preview[62843:331125] Compiler failed to build request
+2026-10-21 13:25:43.065095+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:43.081114+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.087539+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:43.106724+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.112711+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.130267+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.136671+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.156997+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.160019+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:43.178409+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.181023+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:43.203645+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.207765+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:43.224696+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.228928+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:43.250473+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.253547+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:43.271973+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.275457+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:43.291060+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.306489+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.315859+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.334900+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.348864+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.376183+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:43.380001+0200 DjVu Preview[62843:331165] Compiler failed to build request
+Test Case '-[DjVuPreviewTests.ViewerTests testSearchFindsSelectableTextAndWraps]' passed (0.427 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testSearchResultRetentionIsBounded]' started.
+2026-10-21 13:25:43.402064+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.403124+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:43.423390+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.431254+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:43.445293+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.453012+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:43.462880+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.477051+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:43.484430+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.497290+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:43.507551+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.516978+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:43.531424+0200 DjVu Preview[62843:331125] Compiler failed to build request
+2026-10-21 13:25:43.537657+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:43.554379+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:43.576654+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:43.586861+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.607044+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.613098+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.629754+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.635977+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:43.647732+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.665324+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.684158+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.700981+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.720436+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.746598+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.769855+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.793306+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.817724+0200 DjVu Preview[62843:331165] Compiler failed to build request
+Test Case '-[DjVuPreviewTests.ViewerTests testSearchResultRetentionIsBounded]' passed (0.430 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testToolbarAtSupportedWidthsAndAppearances]' started.
+2026-10-21 13:25:43.844235+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.869408+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.895056+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.922701+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.937241+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:43.937475+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:43.937635+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:43.937853+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:43.937982+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:43.938092+0200 DjVu Preview[62843:330973] [SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-10-21 13:25:43.942168+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.959518+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.978704+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:43.995880+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:44.016774+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:44.035494+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:44.057058+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:44.076735+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:44.096283+0200 DjVu Preview[62843:331018] Compiler failed to build request
+2026-10-21 13:25:44.117190+0200 DjVu Preview[62843:331018] Compiler failed to build request
+2026-10-21 13:25:44.136860+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:44.172093+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:44.217771+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:44.260840+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:44.520983+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:44.681436+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:44.831315+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:44.915038+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:44.943120+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:45.165711+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:45.191730+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:45.273106+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:45.320404+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:45.330119+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:45.397845+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:45.437814+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:45.446572+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:45.464124+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:45.492339+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:45.531474+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:45.562717+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:45.574322+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:45.611815+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:45.625313+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:45.640050+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:45.679033+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:45.760856+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:45.761529+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:45.799400+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:45.803929+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:45.834646+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:45.842355+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:45.864450+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:45.881689+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:45.906981+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:46.007276+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.117304+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:46.154927+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:46.168312+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.180130+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:46.250432+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:46.284107+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:46.285315+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.318418+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:46.353991+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.355252+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:46.399046+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:46.400514+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.430562+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:46.432407+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:46.458525+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.464455+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:46.492312+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:46.499024+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:46.541099+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:46.546992+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:46.574342+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:46.581266+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.602490+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:46.609690+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.634417+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:46.634957+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:46.678424+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:46.679720+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:46.709089+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.712565+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:46.734539+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.738274+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:46.764404+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:46.765602+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.787595+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:46.787860+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:46.815933+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:46.819142+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:46.850648+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:46.857071+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:46.886787+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:46.889251+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:46.915972+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:46.917215+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:46.942028+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:46.945198+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:46.975317+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:46.975712+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.004434+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:47.006045+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.029305+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:47.057697+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.073223+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.085634+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.102727+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.126812+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.128614+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.148871+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.173710+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.174503+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:47.196609+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.200572+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:47.245037+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.245053+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.266696+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.267648+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.291644+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.292150+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.314976+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.315397+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.339202+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:47.339786+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.361220+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:47.361583+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.391138+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:47.394097+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:47.413673+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:47.416097+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:47.439328+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.440118+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:47.461550+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.461550+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:47.487160+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:47.487606+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:47.509990+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.510340+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.532629+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.533009+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.555877+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.556965+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.581225+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.581841+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.602169+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.602634+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.626986+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:47.627677+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.648087+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:47.648458+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.671545+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:47.672223+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:47.692200+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:47.692591+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:47.716985+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.717698+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:47.738927+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.739240+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:47.763299+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.764436+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.787068+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.787812+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.811005+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.811868+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.831572+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.832534+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:47.858365+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.859039+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.883022+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.883917+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.913790+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.914443+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:47.939183+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.939899+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:47.965076+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.965810+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:47.990643+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:47.990822+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.017312+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:48.017536+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.039591+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.042120+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.068389+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.069007+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.090175+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.090526+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:48.113972+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.114370+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.135646+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.135821+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.158627+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:48.159329+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.180421+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:48.180814+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.207979+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:48.208719+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.229846+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:48.230750+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.254011+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.254956+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.277221+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.303442+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:48.303528+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.325161+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.325331+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:48.353998+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.354314+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.375335+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.398313+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.398338+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:48.417963+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.418778+0200 DjVu Preview[62843:331164] Compiler failed to build request
+2026-10-21 13:25:48.447474+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.449007+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.468855+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.470134+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.494957+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:48.495586+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.516791+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:48.517254+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.539997+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:48.540573+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:48.562987+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:48.563804+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.597453+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:25:48.599640+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:48.622711+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:48.624110+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:48.654167+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:48.655100+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:48.676745+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.676745+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:48.700630+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:48.700948+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.725442+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:48.729472+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.754783+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.755960+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:48.786002+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.789386+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:48.822571+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:48.822655+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:48.845108+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:48.846268+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.871835+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:48.873563+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:48.894827+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:48.896374+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:48.921106+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:48.922004+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.941982+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:48.943259+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:48.966797+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:48.967913+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:48.988100+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:48.988524+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:49.011477+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:49.011908+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.033197+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:49.033407+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.078341+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:49.078396+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:49.123609+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.137981+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.173189+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:49.174047+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.197812+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:49.199719+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.229188+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.229409+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:49.253426+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.253998+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:49.280191+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:49.280825+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.303033+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:49.303410+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.329647+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:49.330388+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:49.354151+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:49.355275+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:49.385991+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:49.386409+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:49.410074+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:49.410388+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:49.439686+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:49.439770+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:49.466819+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.467254+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:49.492975+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:49.494449+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.516781+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.519065+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.607253+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:49.612469+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.634098+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:49.640581+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.674520+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:49.679800+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:49.701192+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:49.706870+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:49.740364+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.740524+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:49.763563+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.787465+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:49.787935+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.810075+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.810074+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.834724+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:49.835053+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.857717+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:49.881231+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:49.881742+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.903306+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.903627+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:49.927501+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:49.928342+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.951617+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:49.975343+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:49.975814+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:49.999549+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:50.025553+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:50.026158+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.050195+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:50.074314+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.074820+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.097245+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.121590+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:50.122382+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.144523+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:50.176350+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:50.176374+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:50.200382+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.200809+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:50.225461+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.226017+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:50.248062+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.248741+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.279984+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:50.280158+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.304208+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:50.329777+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:50.330346+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.351642+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:50.351910+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:50.377266+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.377987+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:50.398682+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.434439+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:50.434618+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.509598+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:50.510957+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:50.564671+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.573023+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:50.609538+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.638766+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:50.655985+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:50.678956+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:50.695656+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:50.722402+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.738568+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.752302+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.791581+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:50.820768+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:50.824017+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.866021+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:50.889658+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.908268+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.910895+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:50.933088+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:50.933644+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.953097+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:50.953685+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:50.976611+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:50.977247+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:50.997798+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.024452+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:51.025041+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.048798+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.049433+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:51.073359+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.073819+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.094125+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:51.117090+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.117496+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.140211+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.140739+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.165068+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:51.165749+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.186160+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:51.209175+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.209908+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.231323+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.231455+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:51.253090+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.253688+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.273621+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:51.295241+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.295770+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.316682+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.316802+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.338607+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.339290+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.361254+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.362670+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.385073+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.385471+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.408416+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.408567+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.434501+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.435378+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.455854+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.456353+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.479115+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.479768+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.501623+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.501819+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.530287+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:51.530845+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.552797+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:51.576140+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.576716+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.598831+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.599107+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.629054+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:51.629054+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.657130+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:51.686672+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.687327+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:51.708712+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.708890+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:51.733755+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.734406+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:51.755474+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.778063+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:51.778811+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:51.799825+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:51.800460+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:51.823467+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:51.824059+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:51.845282+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:51.845729+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:51.869616+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.870376+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:51.893159+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.893292+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:51.917631+0200 DjVu Preview[62843:331128] Compiler failed to build request
+2026-10-21 13:25:51.918903+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.942342+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:51.942745+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:51.967861+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.968366+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:51.991014+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:51.991564+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:54.388014+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.413111+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.447648+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.477689+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.498861+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.522621+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.546968+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.577345+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.608560+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.629889+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.655295+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.679578+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.712032+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.745161+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.764884+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.783086+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:54.783556+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:54.807231+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:54.807231+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:54.836204+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:54.836839+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:54.859403+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:54.859651+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:54.884851+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:54.885154+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:54.907915+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:54.908554+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:54.931768+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:54.932326+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:54.954325+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:54.978046+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:54.978394+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:55.003587+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:55.033198+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:55.033652+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:55.056323+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:55.080726+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:55.081111+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:55.105879+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:55.132620+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:55.133058+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:55.159520+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:55.185323+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:55.186091+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:55.208130+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:55.238626+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:55.239793+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:55.263129+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:55.291836+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:55.291931+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:55.314703+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:55.315128+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:55.840708+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:55.853187+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:55.865289+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:55.883275+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:55.908911+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:55.908974+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:55.933401+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:55.933882+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:55.959376+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:55.959763+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:55.984790+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:55.986744+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.012718+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:56.018061+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.038905+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.043915+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.069588+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.069941+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:56.092706+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.093053+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:56.120953+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.121039+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:56.145507+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:56.147429+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.198097+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.203737+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.222624+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.227950+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.255337+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.255337+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.277122+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.278036+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.301749+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.302331+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.323854+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.324386+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:56.346916+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.347539+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.369694+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.370387+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.393658+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.394448+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.416389+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.416614+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.444007+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.444709+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.467132+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.467289+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.494180+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:56.495396+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.523839+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.529728+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:56.559858+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:56.573101+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.595583+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.597320+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.625667+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.626338+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.650648+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.650675+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.675145+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:56.676162+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.699637+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.699908+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.724843+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.725363+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.760185+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:56.760809+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.787044+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.788390+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:56.810104+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.810850+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:56.834761+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.835478+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:56.856292+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.856519+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:56.884446+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:56.884966+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.906599+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:56.906815+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:56.931131+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.931601+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:56.953015+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:56.953618+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:56.976954+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:56.977629+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:57.000497+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.001098+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.024215+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:57.024930+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.046901+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:57.046937+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.070973+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.072194+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:57.093416+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.094021+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.116580+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:57.116907+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.139599+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:57.142029+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.172161+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.173852+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:57.196360+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.197108+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:57.236070+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.238312+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.259768+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.262643+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.287719+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.288147+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.310281+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.310652+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.336579+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.337263+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.361222+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.361595+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.392592+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.393040+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.418428+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.420415+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.448271+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.448355+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.470756+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.471346+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.498675+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:57.499448+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.521129+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.523870+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:57.552911+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.552927+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.577777+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.578328+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.623312+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.624542+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.646182+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.647293+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.673112+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.673722+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.696283+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.696407+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.725309+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:57.727177+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.748981+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:57.752081+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.776866+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.777348+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:57.800634+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:57.800638+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.828076+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.828742+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:57.851721+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.852122+0200 DjVu Preview[62843:331137] Compiler failed to build request
+2026-10-21 13:25:57.878347+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:57.879048+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.902777+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.903109+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:57.935394+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.935942+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.959169+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:57.959561+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:57.989959+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:57.990613+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.013535+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:58.013940+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.042169+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:25:58.042463+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:58.065152+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.065169+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.093024+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:58.094028+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.117455+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:58.118161+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:58.147296+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.147373+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:58.170955+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:58.172150+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.199105+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:58.199203+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.221306+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.222535+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.248753+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:58.249352+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.273232+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.273522+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:58.300337+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.301773+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.322563+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.324127+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.354064+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.355134+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.379462+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.379806+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.407389+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.408337+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.428316+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.428673+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.451168+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.451939+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.472025+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.472377+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.493970+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.494899+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.515632+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.516022+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.541135+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:58.541199+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.561743+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.562771+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:58.589081+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.589832+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:25:58.611189+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.611449+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:25:58.634871+0200 DjVu Preview[62843:330989] Compiler failed to build request
+2026-10-21 13:25:58.634954+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.657170+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:58.658259+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.681210+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:58.681909+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.702187+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:58.702622+0200 DjVu Preview[62843:331129] Compiler failed to build request
+2026-10-21 13:25:58.724553+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.725206+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:25:58.745393+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:25:58.745911+0200 DjVu Preview[62843:331171] Compiler failed to build request
+2026-10-21 13:26:05.973567+0200 DjVu Preview[62843:331130] Compiler failed to build request
+2026-10-21 13:26:05.999911+0200 DjVu Preview[62843:331130] Compiler failed to build request
+2026-10-21 13:26:06.033542+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:26:06.066690+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:26:06.090007+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:26:06.115906+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:26:06.141119+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:26:06.174725+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:26:06.209455+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:26:06.231447+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:26:06.256016+0200 DjVu Preview[62843:331157] Compiler failed to build request
+2026-10-21 13:26:06.282593+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.314920+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.345123+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.366650+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.384307+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.401558+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.418810+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.437504+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.454487+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.454913+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.474305+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.482089+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.498173+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.499656+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.520059+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.520578+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.538742+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.543033+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.560527+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.561531+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.579980+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.585003+0200 DjVu Preview[62843:331130] Compiler failed to build request
+2026-10-21 13:26:06.600463+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.606815+0200 DjVu Preview[62843:331130] Compiler failed to build request
+2026-10-21 13:26:06.621938+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.624497+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:06.644317+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:06.644983+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.660779+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:06.665138+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:06.683549+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.688398+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.704540+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.710900+0200 DjVu Preview[62843:330990] Compiler failed to build request
+2026-10-21 13:26:06.729179+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.734525+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:06.751953+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.757050+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:06.775588+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.780507+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.795895+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.801141+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.822149+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.829080+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:06.849407+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.853973+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:06.878144+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.881529+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:06.899473+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.904793+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:06.925973+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.929779+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:06.947845+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.952010+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:06.973534+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.976519+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:06.995976+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:06.998784+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:07.020175+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:07.026335+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:07.045048+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:07.049050+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:07.068387+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.072772+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:07.087983+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.099696+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:07.110989+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.122898+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:07.135262+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.144595+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:07.165277+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.183777+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.202498+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.221212+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.239992+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.259396+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.278162+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.298337+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.315955+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.335160+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.361443+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.387913+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.412644+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.437203+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.462077+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.486166+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.512021+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.540391+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.559152+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.578253+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.597222+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.614653+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.632757+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.651584+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.671717+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.689254+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.706831+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.723570+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.741521+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.767049+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.792427+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.817871+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.842596+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.868124+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.892894+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.918643+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:07.943090+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:07.943475+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:07.967689+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:07.967700+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:07.992252+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:07.992752+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.015105+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.039169+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.039635+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.060671+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:08.061108+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.083831+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.084881+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.107369+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.130791+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.131346+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.152752+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.152817+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.175861+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.176574+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.198699+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.199209+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.222927+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.223609+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.245992+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.246301+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.269075+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.270123+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.291804+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.320007+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.320182+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.343169+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.345957+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.369430+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.370573+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.393896+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.417508+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.418794+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.440399+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:08.440947+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.465657+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:08.466466+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.488518+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:08.488831+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.512164+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.512613+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:08.534363+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.534633+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.558014+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:08.558820+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.581724+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.582582+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.609472+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:08.609560+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.633430+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.633445+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.656482+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.657089+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.678905+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.679068+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.702863+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.703511+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.725410+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.725638+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.748642+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.748642+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.770080+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:08.770734+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.793802+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.794318+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:08.815158+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.815423+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:08.840169+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.840334+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.862734+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:08.862832+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.888779+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.889175+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.913316+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.938910+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.939291+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:08.960649+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.960648+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:08.982664+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:08.983822+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.007691+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.031335+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.031525+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.053883+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.053944+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.077049+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.077800+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.098562+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.099163+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.122668+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.122996+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.144538+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.144740+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.167972+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.172114+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.192361+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.198599+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.220562+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.221389+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.243522+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.244470+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.265926+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.266806+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.286745+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.287438+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.309954+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.310606+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.331014+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.331140+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.354656+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.355220+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.379212+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.379381+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.403496+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.404166+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.426650+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.426737+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.450105+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.450628+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.475471+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.475640+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.499546+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.499999+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.521691+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.522038+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.544382+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.545140+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.567214+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.567655+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.591216+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.591932+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.613447+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.614085+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.637297+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.637900+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.659074+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.659293+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:09.685696+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.687036+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.709459+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.710620+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.735968+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.736533+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.758410+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.758641+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:09.781815+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.782675+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.803080+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.803748+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.827014+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.827828+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.849079+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.849352+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.873837+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:09.874370+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.896068+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.896264+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.920300+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.920735+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.942193+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.942892+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.966907+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:09.966907+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:09.990130+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:09.991949+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:10.018587+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:10.019180+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.042189+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:10.042527+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.066602+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:10.067383+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.090026+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:10.113855+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.114353+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.136891+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.136958+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.162977+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.163534+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:10.186292+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:10.210301+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.210726+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.233126+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.233890+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.260277+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.260738+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.284024+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.284473+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:10.309431+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.310073+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.330689+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.330821+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.354431+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:10.354987+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.375886+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.375884+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:10.397914+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.398581+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.418839+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.419274+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.441780+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:10.442580+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.462178+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.462610+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.485058+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.485823+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.506799+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.506828+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.530950+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:10.530961+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.556379+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.556752+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:10.582023+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.583235+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.606742+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.606808+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.634575+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.635270+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.659824+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.661262+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.686959+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:10.687313+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.712232+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:10.713023+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:10.739237+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:10.739475+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:10.764288+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.764288+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.796722+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.797779+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:10.824556+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:10.824643+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.855295+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:10.856252+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:10.881813+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.882039+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:10.908071+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.908576+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.931606+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.932051+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:10.957430+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:10.957827+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:10.982996+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:10.983388+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:11.010087+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:11.010749+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:11.035166+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:11.035925+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:11.064037+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:11.065599+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.088534+0200 DjVu Preview[62843:331165] Compiler failed to build request
+2026-10-21 13:26:11.094849+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.136903+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:11.143256+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:11.169808+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:11.175221+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:11.201303+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.201840+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:11.226611+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.227105+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:11.251750+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:11.252355+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.277595+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.277783+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.304354+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:11.305144+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.342412+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.347761+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:11.379298+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:11.379326+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.408438+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:11.415948+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:11.444956+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.446720+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:11.469758+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.495066+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.495697+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:11.517771+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.518022+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:11.541883+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.542701+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.564277+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.586628+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.587447+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:11.609437+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.610460+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.633373+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.634147+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:11.655873+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.679745+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:11.680219+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.701281+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:11.725479+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.725852+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.748520+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.770797+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:11.771181+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:11.792452+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:11.815426+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:11.816188+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:11.838223+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:11.860979+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:11.861667+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.882677+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:11.882954+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.905430+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.905923+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:11.926837+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.927044+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.949683+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:11.950358+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:11.970183+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:11.993505+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:11.993965+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.016540+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:12.016845+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.041358+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:12.041746+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.062871+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:12.086432+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.087037+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.109321+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.109665+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.134532+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:12.134984+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.159422+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:12.183779+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.184141+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.209455+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.209560+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.233441+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.233759+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.256619+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.281147+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:12.281517+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.307880+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.308295+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:12.330908+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.331568+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.352959+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.376686+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.377317+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.399038+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.399238+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.422671+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.423243+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.444538+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.474267+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.474321+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.497784+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.499028+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.523546+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.524622+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.546956+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.569506+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.571866+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.595717+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.596593+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.624281+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.625239+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.645977+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.671354+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.673280+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:12.694240+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.696021+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:12.724123+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:12.726283+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.747443+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:12.773113+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.774248+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.797863+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:12.799915+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.825998+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:12.826488+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:12.849862+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:12.849878+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:12.875780+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:12.879440+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:12.899855+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.905141+0200 DjVu Preview[62843:331169] Compiler failed to build request
+2026-10-21 13:26:12.930881+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.931811+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:12.957611+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.957673+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:12.984579+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:12.988893+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:13.008986+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.012683+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:13.037326+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:13.038433+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.061687+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:13.086406+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:13.086406+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:13.114099+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:13.117289+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:13.142565+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:13.142604+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:13.163756+0200 DjVu Preview[62843:331170] Compiler failed to build request
+2026-10-21 13:26:13.187781+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:13.188297+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:13.209285+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:13.209285+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:13.230542+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.231786+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:13.251209+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.273017+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:13.274947+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:13.296969+0200 DjVu Preview[62843:331710] Compiler failed to build request
+2026-10-21 13:26:13.305380+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:13.327240+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.327746+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:13.349828+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.349828+0200 DjVu Preview[62843:331158] Compiler failed to build request
+2026-10-21 13:26:13.375325+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.376442+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:13.397262+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.400071+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:13.423286+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.425069+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:13.444610+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.447582+0200 DjVu Preview[62843:330998] Compiler failed to build request
+2026-10-21 13:26:13.469509+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.471435+0200 DjVu Preview[62843:331709] Compiler failed to build request
+2026-10-21 13:26:13.492178+0200 DjVu Preview[62843:331707] Compiler failed to build request
+2026-10-21 13:26:13.493788+0200 DjVu Preview[62843:331709] Compiler failed to build request
+Test Case '-[DjVuPreviewTests.ViewerTests testToolbarAtSupportedWidthsAndAppearances]' passed (30.678 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testWelcomeDoesNotCreateDocumentsAndReusesItsWindow]' started.
+Test Case '-[DjVuPreviewTests.ViewerTests testWelcomeDoesNotCreateDocumentsAndReusesItsWindow]' passed (0.051 seconds).
+Test Case '-[DjVuPreviewTests.ViewerTests testWelcomeFollowsLastDocumentRemoval]' started.
+2026-10-21 13:26:14.629442+0200 DjVu Preview[62843:331709] [logging-persist] cannot open file at line 51044 of [f0ca7bba1c]
+2026-10-21 13:26:14.629508+0200 DjVu Preview[62843:331709] [logging-persist] os_unix.c:51044: (2) open(/private/var/db/DetachedSignatures) - No such file or directory
+2026-10-21 13:26:14.634158+0200 DjVu Preview[62843:331709] [default] Insert failed for list identifier com.apple.LSSharedFileList.ApplicationRecentDocuments Error: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list"
+2026-10-21 13:26:14.640676+0200 DjVu Preview[62843:331709] [logging-persist] cannot open file at line 51044 of [f0ca7bba1c]
+2026-10-21 13:26:14.640711+0200 DjVu Preview[62843:331709] [logging-persist] os_unix.c:51044: (2) open(/private/var/db/DetachedSignatures) - No such file or directory
+2026-10-21 13:26:14.645103+0200 DjVu Preview[62843:331709] [default] Insert failed for list identifier com.apple.LSSharedFileList.ApplicationRecentDocuments Error: Error Domain=NSOSStatusErrorDomain Code=-50 "paramErr: error in user parameter list"
+Test Case '-[DjVuPreviewTests.ViewerTests testWelcomeFollowsLastDocumentRemoval]' passed (0.231 seconds).
+Test Suite 'ViewerTests' passed at 2026-10-21 13:26:14.782.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 33.774 (33.783) seconds
+Test Suite 'DjVuPreviewTests.xctest' passed at 2026-10-21 13:26:14.783.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 33.774 (33.784) seconds
+Test Suite 'All tests' passed at 2026-10-21 13:26:14.783.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 33.774 (33.785) seconds
+2026-10-21 13:26:21.056 xcodebuild[62769:330580] [MT] IDETestOperationsObserverDebug: 41.907 elapsed -- Testing started completed.
+2026-10-21 13:26:21.056 xcodebuild[62769:330580] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-21 13:26:21.056 xcodebuild[62769:330580] [MT] IDETestOperationsObserverDebug: 41.907 sec, +41.907 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/moamen/Documents/REA APPS/DjVu Preview/Build/Logs/Test/Test-DjVu Preview-2026.10.21_13-25-28-+0200.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

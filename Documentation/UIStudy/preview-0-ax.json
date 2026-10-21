@@ -1,0 +1,1494 @@
+{
+  "evidence_id": "ev_2f6f67bdc29a93fff8e044e2de76cfce7c06b757db87010e7749d3bb31692d0c",
+  "initial": {
+    "gaps": [],
+    "nodes": [
+      {
+        "actions": [
+          "AXRaise"
+        ],
+        "children_count": 7,
+        "path": [],
+        "role": "AXWindow",
+        "title": "Comparison.pdf \u2013 Page 1 of 4",
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 4,
+        "path": [
+          0
+        ],
+        "role": "AXSplitGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollLeftByPage",
+          "AXScrollRightByPage",
+          "AXScrollUpByPage",
+          "AXScrollDownByPage"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          0
+        ],
+        "role": "AXScrollArea",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXShowMenu"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          0,
+          0
+        ],
+        "role": "AXList",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 6,
+        "path": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXList",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 1,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 2,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "role": "AXImage",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "1"
+      },
+      {
+        "actions": [],
+        "children_count": 1,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 2,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "role": "AXImage",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          1
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "2"
+      },
+      {
+        "actions": [],
+        "children_count": 1,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 2,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        "role": "AXImage",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          1
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "3"
+      },
+      {
+        "actions": [],
+        "children_count": 1,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          4
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 2,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        "role": "AXImage",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          0,
+          1
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "4"
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          0,
+          0,
+          0,
+          5
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXShowMenu",
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          1
+        ],
+        "role": "AXPopUpButton",
+        "title": null,
+        "value": "Insert Page\u2026"
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          2
+        ],
+        "role": "AXSplitter",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollLeftByPage",
+          "AXScrollRightByPage",
+          "AXScrollUpByPage",
+          "AXScrollDownByPage"
+        ],
+        "children_count": 2,
+        "path": [
+          0,
+          3
+        ],
+        "role": "AXScrollArea",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 4,
+        "path": [
+          0,
+          3,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          0
+        ],
+        "role": "AXPage",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 2,
+        "path": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "Document interface study \u2014 1"
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "The same PDF is used in both viewers.\nPage 1 of 4"
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          1
+        ],
+        "role": "AXPage",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          1,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 2,
+        "path": [
+          0,
+          3,
+          0,
+          1,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "Document interface study \u2014 2"
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "The same PDF is used in both viewers.\nPage 2 of 4"
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          2
+        ],
+        "role": "AXPage",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          2,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 2,
+        "path": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "Document interface study \u2014 3"
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          0,
+          1
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "The same PDF is used in both viewers.\nPage 3 of 4"
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          3
+        ],
+        "role": "AXPage",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          3,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 2,
+        "path": [
+          0,
+          3,
+          0,
+          3,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "Document interface study \u2014 4"
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          3,
+          0,
+          0,
+          1
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 1,
+        "path": [
+          0,
+          3,
+          0,
+          3,
+          0,
+          0,
+          1,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXScrollToVisible"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          0,
+          3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "The same PDF is used in both viewers.\nPage 4 of 4"
+      },
+      {
+        "actions": [],
+        "children_count": 5,
+        "path": [
+          0,
+          3,
+          1
+        ],
+        "role": "AXScrollBar",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          1,
+          0
+        ],
+        "role": "AXValueIndicator",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          1,
+          1
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          1,
+          2
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          1,
+          3
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          0,
+          3,
+          1,
+          4
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXShowMenu"
+        ],
+        "children_count": 10,
+        "path": [
+          1
+        ],
+        "role": "AXToolbar",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXShowMenu",
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          0
+        ],
+        "role": "AXMenuButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "Name:Move next\nTarget:0x0\nSelector:(null)",
+          "Name:Remove from toolbar\nTarget:0x0\nSelector:(null)"
+        ],
+        "children_count": 1,
+        "path": [
+          1,
+          1
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 3,
+        "path": [
+          1,
+          1,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          1,
+          0,
+          0
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          1,
+          0,
+          1
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          1,
+          0,
+          2
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "Name:Move previous\nTarget:0x0\nSelector:(null)",
+          "Name:Move next\nTarget:0x0\nSelector:(null)",
+          "Name:Remove from toolbar\nTarget:0x0\nSelector:(null)"
+        ],
+        "children_count": 1,
+        "path": [
+          1,
+          2
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 2,
+        "path": [
+          1,
+          2,
+          0
+        ],
+        "role": "AXRadioGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          2,
+          0,
+          0
+        ],
+        "role": "AXRadioButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress",
+          "AXShowMenu"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          2,
+          0,
+          1
+        ],
+        "role": "AXMenuButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress",
+          "Name:Move previous\nTarget:0x0\nSelector:(null)",
+          "Name:Move next\nTarget:0x0\nSelector:(null)",
+          "Name:Remove from toolbar\nTarget:0x0\nSelector:(null)"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          3
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress",
+          "Name:Move previous\nTarget:0x0\nSelector:(null)",
+          "Name:Move next\nTarget:0x0\nSelector:(null)",
+          "Name:Remove from toolbar\nTarget:0x0\nSelector:(null)"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          4
+        ],
+        "role": "AXRadioButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress",
+          "Name:Move previous\nTarget:0x0\nSelector:(null)",
+          "Name:Move next\nTarget:0x0\nSelector:(null)",
+          "Name:Remove from toolbar\nTarget:0x0\nSelector:(null)"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          5
+        ],
+        "role": "AXCheckBox",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress",
+          "Name:Move previous\nTarget:0x0\nSelector:(null)",
+          "Name:Move next\nTarget:0x0\nSelector:(null)",
+          "Name:Remove from toolbar\nTarget:0x0\nSelector:(null)"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          6
+        ],
+        "role": "AXCheckBox",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress",
+          "Name:Move previous\nTarget:0x0\nSelector:(null)",
+          "Name:Move next\nTarget:0x0\nSelector:(null)",
+          "Name:Remove from toolbar\nTarget:0x0\nSelector:(null)"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          7
+        ],
+        "role": "AXCheckBox",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress",
+          "Name:Move previous\nTarget:0x0\nSelector:(null)",
+          "Name:Move next\nTarget:0x0\nSelector:(null)",
+          "Name:Remove from toolbar\nTarget:0x0\nSelector:(null)"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          8
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "Name:Move previous\nTarget:0x0\nSelector:(null)",
+          "Name:Remove from toolbar\nTarget:0x0\nSelector:(null)"
+        ],
+        "children_count": 1,
+        "path": [
+          1,
+          9
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          1,
+          9,
+          0
+        ],
+        "role": "AXButton",
+        "title": "",
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          2
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress",
+          "AXZoomWindow",
+          "AXShowMenu"
+        ],
+        "children_count": 1,
+        "path": [
+          3
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          3,
+          0
+        ],
+        "role": "AXGroup",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          4
+        ],
+        "role": "AXButton",
+        "title": null,
+        "value": null
+      },
+      {
+        "actions": [
+          "AXPress"
+        ],
+        "children_count": 0,
+        "path": [
+          5
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "Comparison.pdf"
+      },
+      {
+        "actions": [],
+        "children_count": 0,
+        "path": [
+          6
+        ],
+        "role": "AXStaticText",
+        "title": null,
+        "value": "Page 1 of 4"
+      }
+    ],
+    "screenshot": {
+      "sha256": "7a6ae51737243bcd6a9b03a3b9b5390c46b19c471ef31ca86ea295bc3a00d185",
+      "width": 1035,
+      "height": 925
+    },
+    "truncated": false,
+    "window": {
+      "executable": "/System/Applications/Preview.app/Contents/MacOS/Preview",
+      "launch_time": 1792577094.827893,
+      "pid": 38882,
+      "title": "Comparison.pdf",
+      "window_id": 4238
+    }
+  }
+}

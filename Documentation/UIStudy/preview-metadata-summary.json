@@ -1,0 +1,310 @@
+{
+  "evidence_id": "ev_a35fde01a0cf3d7ded5a65409f11751ebdea382239e34d3514ad3e1f37b188b8",
+  "subject": {
+    "architecture": "x86_64",
+    "digest": {
+      "sha256": "db13f63838230a80bbdcee98913df71731cbc8417a625438c68be54943108c3c"
+    },
+    "format": "mach-o-universal",
+    "local_path": "/System/Applications/Preview.app/Contents/MacOS/Preview",
+    "name": "Preview"
+  },
+  "classes": [
+    {
+      "name": "PVToolbar",
+      "superclass": "NSToolbar",
+      "methods": []
+    },
+    {
+      "name": "PVToolbarItem",
+      "superclass": "NSToolbarItem",
+      "methods": [
+        {
+          "selector": "initWithIdentifier:tag:itemProperties:",
+          "address": "0x10005c4ab"
+        }
+      ]
+    },
+    {
+      "name": "PVSegmentedToolbarItem",
+      "superclass": "NSToolbarItemGroup",
+      "methods": [
+        {
+          "selector": "initWithIdentifier:tag:itemProperties:",
+          "address": "0x10005e826"
+        }
+      ]
+    },
+    {
+      "name": "PVPopupMenuToolbarItem",
+      "superclass": "NSToolbarItem",
+      "methods": [
+        {
+          "selector": "initWithIdentifier:tag:itemProperties:",
+          "address": "0x10006226c"
+        },
+        {
+          "selector": "setIsShowingTopSidebarSeparator:",
+          "address": "0x100062394"
+        },
+        {
+          "selector": "autoHideSidebarSeparator",
+          "address": "0x100062922"
+        },
+        {
+          "selector": "setAutoHideSidebarSeparator:",
+          "address": "0x100062938"
+        }
+      ]
+    },
+    {
+      "name": "PVSplitViewController",
+      "superclass": "NSSplitViewController",
+      "methods": [
+        {
+          "selector": "sidebarView",
+          "address": "0x10006fcca"
+        },
+        {
+          "selector": "sidebarWidth",
+          "address": "0x10006fe38"
+        },
+        {
+          "selector": "isSidebarCollapsed",
+          "address": "0x10006fea8"
+        },
+        {
+          "selector": "setIsUpdatingSidebarWidth:",
+          "address": "0x10006feed"
+        },
+        {
+          "selector": "_openOrCloseSidebarImmediately:maintainingSidebarContentWidth:",
+          "address": "0x10006ffbf"
+        },
+        {
+          "selector": "_openOrCloseSidebarAnimated:maintainingSidebarContentWidth:withCompletionHandler:",
+          "address": "0x100070091"
+        },
+        {
+          "selector": "closeSidebar",
+          "address": "0x1000701ad"
+        },
+        {
+          "selector": "animateCloseSidebarWithCompletionHandler:",
+          "address": "0x1000701dd"
+        },
+        {
+          "selector": "openSidebarToWidth:",
+          "address": "0x100070231"
+        },
+        {
+          "selector": "animateOpenSidebarToWidth:withCompletionHandler:",
+          "address": "0x100070248"
+        },
+        {
+          "selector": "updateSidebarPaneBottomViewControllerVisibility:",
+          "address": "0x100070262"
+        },
+        {
+          "selector": "splitViewItem:willChangeCollapsed:animated:",
+          "address": "0x100070705"
+        },
+        {
+          "selector": "splitViewItem:didChangeCollapsed:animated:",
+          "address": "0x10007087d"
+        },
+        {
+          "selector": "_addSidebarWidthConstraintWithWidth:",
+          "address": "0x100070a80"
+        },
+        {
+          "selector": "_removeSidebarWidthConstraint",
+          "address": "0x100070bce"
+        },
+        {
+          "selector": "isUpdatingSidebarWidth",
+          "address": "0x100070cf4"
+        },
+        {
+          "selector": "sidebarItem",
+          "address": "0x100070d32"
+        },
+        {
+          "selector": "setSidebarItem:",
+          "address": "0x100070d43"
+        },
+        {
+          "selector": "sidebarPaneBottomViewController",
+          "address": "0x100070e0d"
+        },
+        {
+          "selector": "setSidebarPaneBottomViewController:",
+          "address": "0x100070e1e"
+        },
+        {
+          "selector": "targetSidebarViewWidthConstraint",
+          "address": "0x100070e56"
+        },
+        {
+          "selector": "setTargetSidebarViewWidthConstraint:",
+          "address": "0x100070e6c"
+        },
+        {
+          "selector": "targetSidebarViewWidthForAnimation",
+          "address": "0x100070e7d"
+        },
+        {
+          "selector": "setTargetSidebarViewWidthForAnimation:",
+          "address": "0x100070e8f"
+        },
+        {
+          "selector": "firstResponderWasLockedBeforeSidebarOpened",
+          "address": "0x100070ec8"
+        },
+        {
+          "selector": "setFirstResponderWasLockedBeforeSidebarOpened:",
+          "address": "0x100070ed9"
+        }
+      ]
+    },
+    {
+      "name": "PVSidebarCollectionView",
+      "superclass": "NSCollectionView",
+      "methods": []
+    },
+    {
+      "name": "PVThumbnailSidebarController",
+      "superclass": "NSViewController",
+      "methods": [
+        {
+          "selector": "willAnimateToWidth:",
+          "address": "0x100127c47"
+        },
+        {
+          "selector": "didAnimateToWidth:",
+          "address": "0x100127cf1"
+        },
+        {
+          "selector": "expandAllCollapsedGroups",
+          "address": "0x1001282da"
+        },
+        {
+          "selector": "_thumbnailSizeToFitSidebarWidth:",
+          "address": "0x100129343"
+        },
+        {
+          "selector": "_itemSizeInPoints:andThumbnailSizeInPoints:thumbnailMaxWidth:andAspect:",
+          "address": "0x100129721"
+        },
+        {
+          "selector": "_applyThumbnailSize:toCollectionViewItem:triggerIconUpdate:",
+          "address": "0x100129ecd"
+        },
+        {
+          "selector": "_sidebarViewWillChangeFrame:",
+          "address": "0x10012a510"
+        },
+        {
+          "selector": "_sidebarViewDidChangeFrame:",
+          "address": "0x10012aca9"
+        },
+        {
+          "selector": "_handleSidebarViewDidChangeFrame:",
+          "address": "0x10012aebd"
+        },
+        {
+          "selector": "isSidebarAutohidingEnabled",
+          "address": "0x10012b603"
+        },
+        {
+          "selector": "_performDropMovingItems:toDropLocation:withDropOperation:fromSourceSidebarController:",
+          "address": "0x100134a89"
+        },
+        {
+          "selector": "sidebarView",
+          "address": "0x100139a49"
+        },
+        {
+          "selector": "setSidebarView:",
+          "address": "0x100139a5f"
+        },
+        {
+          "selector": "animatesTransitions",
+          "address": "0x100139a70"
+        },
+        {
+          "selector": "setAnimatesTransitions:",
+          "address": "0x100139a81"
+        },
+        {
+          "selector": "inSidebarViewDidChangeFrameCount",
+          "address": "0x100139b4b"
+        },
+        {
+          "selector": "setInSidebarViewDidChangeFrameCount:",
+          "address": "0x100139b5c"
+        },
+        {
+          "selector": "autoUpdatesThumbnailSize",
+          "address": "0x100139b6d"
+        },
+        {
+          "selector": "setAutoUpdatesThumbnailSize:",
+          "address": "0x100139b7e"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Derived by an REA composed workflow.",
+    "macOS native inspection utilities (native-macos apple-metadata-reader-1) inspect_native_dispatch_metadata: This reader admits simple Swift conformance/static witness records and non-generic, non-resilient class vtables; generic/resilient tables and other Swift metadata families are not decoded",
+    "macOS native inspection utilities (native-macos apple-metadata-reader-1) inspect_native_dispatch_metadata: Unresolved ivar offset pointer 0x1002eed68; Unresolved ivar offset pointer 0x1002eed70; Unresolved ivar offset pointer 0x1002eeeb0; Unresolved ivar offset pointer 0x1002eeeb8; Unresolved ivar offset pointer 0x1002eeec0; Unresolved ivar offset pointer 0x1002eeec8; Unresolved ivar offset pointer 0x1002eeed0; ivar _TtC7Preview14PVPageEntityID.containerID: ivar_offset_pointer_unresolved; ivar _TtC7Preview14PVPageEntityID.pageID: ivar_offset_pointer_unresolved; ivar _TtC7Preview18PVBannerController.returnToSenderOriginalDate: ivar_offset_pointer_unresolved; ivar _TtC7Preview18PVBannerController.returnToSenderMostRecentDate: ivar_offset_pointer_unresolved; ivar _TtC7Preview18PVBannerController.delegate: ivar_offset_pointer_unresolved; ivar _TtC7Preview18PVBannerController.allowsReturnToSenderBanners: ivar_offset_pointer_unresolved; ivar PVSwiftUISidebarCollectionViewItem.uuid: ivar_offset_pointer_unresolved",
+    "macOS native inspection utilities (native-macos apple-metadata-reader-1) inspect_native_dispatch_metadata: chained fixups: DYLD_CHAINED_PTR_64_OFFSET",
+    "macOS native inspection utilities (native-macos apple-metadata-reader-1) inspect_native_dispatch_metadata: conformance_decode_failed at 0x10025e250: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e254: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e258: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e25c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e260: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e264: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e268: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e26c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e270: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e274: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e278: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e27c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e280: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e284: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e288: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e28c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e290: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e294: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e298: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e29c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2a0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2a4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2a8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2ac: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2b0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2b4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2b8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2bc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2c0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2c4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2c8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2cc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2d0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2d4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2d8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2dc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2e0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2e4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2e8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2ec: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2f0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2f4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2f8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e2fc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e300: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e304: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e308: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e30c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e310: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e314: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e318: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e31c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e320: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e324: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e328: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e32c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e330: Unsupported Swift conformance type-reference kind; conformance_decode_failed at 0x10025e334: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e338: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e33c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e340: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e344: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e348: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e34c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e350: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e354: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e358: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e35c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e360: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e364: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e368: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e36c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e370: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e374: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e378: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e37c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e380: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e384: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e388: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e38c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e390: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e394: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e398: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e39c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3a0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3a4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3a8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3ac: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3b0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3b4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3b8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3bc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3c0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3c4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3c8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3cc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3d0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3d4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3d8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3dc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3e0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3e4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3e8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3ec: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3f0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3f4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3f8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e3fc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e400: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e404: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e408: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e40c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e410: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e414: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e418: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e41c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e420: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e424: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e428: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e42c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e430: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e434: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e438: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e43c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e440: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e444: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e448: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e44c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e450: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e454: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e458: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e45c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e460: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e464: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e468: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e46c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e470: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e474: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e478: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e47c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e480: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e484: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e488: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e48c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e490: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e494: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e498: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e49c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4a0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4a4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4a8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4ac: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4b0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4b4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4b8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4bc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4c0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4c4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4c8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4cc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4d0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4d4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4d8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4dc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4e0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4e4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4e8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4ec: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4f0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4f4: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4f8: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e4fc: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e500: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e504: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e508: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e50c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e510: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e514: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e518: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e51c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e520: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e524: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e528: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e52c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e530: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e534: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e538: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e53c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e540: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e544: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e548: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e54c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e550: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e554: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e558: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e55c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e560: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e564: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e568: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e56c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e570: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e574: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e578: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e57c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e580: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e584: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e588: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e58c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e590: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e594: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e598: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e59c: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e5a0: Unmapped or ambiguous metadata pointer 0x0; conformance_decode_failed at 0x10025e5a4: Unmapped or ambiguous metadata pointer 0x0",
+    "macOS native inspection utilities (native-macos apple-metadata-reader-1) inspect_native_dispatch_metadata: vtable_implementation_unresolved at 0x100256bb4: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x10025772c: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257888: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257ac8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257ad0: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257ad8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257af0: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257af8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b00: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b08: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b20: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b28: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b30: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b38: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b50: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b58: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b60: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b68: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b80: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b88: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b90: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257b98: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257bb0: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257bb8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257bc0: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257bc8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257be0: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257be8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257bf0: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257bf8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c10: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c18: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c20: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c28: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c40: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c48: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c50: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c58: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c70: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c78: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c80: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257c88: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257ca0: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257ca8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257cb0: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257cb8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257cd0: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257cd8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257ce8: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257d18: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257d20: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257d28: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257d30: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257d38: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257d40: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementation_unresolved at 0x100257e68: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_decode_failed at 0x10025e6c0: Generic class or resilient superclass metadata is unsupported; vtable_implementation_unresolved at 0x100258038: Async, coroutine, external or unmapped vtable implementation is unresolved; vtable_implementations_unresolved"
+  ],
+  "coverage": [
+    {
+      "facet": "objc_class_method_ivar_metadata",
+      "status": "partial",
+      "examined": 315,
+      "decoded": 630
+    },
+    {
+      "facet": "binary_relative_pointers",
+      "status": "complete",
+      "examined": 594,
+      "decoded": 594
+    },
+    {
+      "facet": "objc_properties_categories",
+      "status": "complete",
+      "examined": 40,
+      "decoded": 40
+    },
+    {
+      "facet": "pointer_fixups",
+      "status": "complete",
+      "examined": 2,
+      "decoded": 2
+    },
+    {
+      "facet": "swift_generic_resilient_witnesses_overrides_async_coroutines",
+      "status": "unsupported",
+      "examined": 0,
+      "decoded": 0
+    },
+    {
+      "facet": "swift_conformances_static_witness_slots",
+      "status": "partial",
+      "examined": 214,
+      "decoded": 0
+    },
+    {
+      "facet": "swift_class_vtable_descriptors",
+      "status": "partial",
+      "examined": 74,
+      "decoded": 28
+    }
+  ]
+}

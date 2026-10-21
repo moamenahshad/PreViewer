@@ -1,0 +1,31 @@
+{
+  "residentMemorySamples": 57,
+  "residentMemoryMaximumBytes": 141185024,
+  "estimates": [
+    {
+      "preset": "Smaller File",
+      "lower": 22782,
+      "upper": 46591,
+      "actual": 35006
+    },
+    {
+      "preset": "Balanced",
+      "lower": 32678,
+      "upper": 56123,
+      "actual": 44720
+    },
+    {
+      "preset": "Maximum Quality",
+      "lower": 524620,
+      "upper": 543919,
+      "actual": 534589
+    }
+  ],
+  "book": [
+    [
+      "18547777",
+      "7.2840800285339355",
+      "5637600"
+    ]
+  ]
+}
