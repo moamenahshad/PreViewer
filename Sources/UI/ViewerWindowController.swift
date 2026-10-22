@@ -20,10 +20,10 @@ final class ViewerWindowController: NSWindowController, NSMenuItemValidation, NS
         window.titleVisibility = .visible
         window.titlebarAppearsTransparent = false
         window.titlebarSeparatorStyle = .none
+        window.center()
         // Use a new autosave namespace so an older compact frame cannot override
         // the wider PreViewer default on first launch.
         window.setFrameAutosaveName("PreViewerDocumentWindowV2")
-        window.center()
         window.contentViewController = documentSplitViewController
         window.toolbarStyle = .unified
         super.init(window: window)
