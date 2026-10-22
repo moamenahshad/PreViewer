@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1 Beta — 2026-10-22
+
+- Added a native contextual menu to the DjVu reader for Copy, Select All, and Find.
+- Improved DjVu rendering, cancellation, outline loading, and search navigation.
+- Intel x86_64/macOS 26 beta validation completed locally with 24 passing tests.
+
 ## 0.1.0 — 2026-10-22
 
 - Native macOS PDF and DjVu viewing with thumbnails, navigation, search, and recent documents.
