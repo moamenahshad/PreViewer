@@ -12,17 +12,17 @@ final class ViewerWindowController: NSWindowController, NSMenuItemValidation, NS
     init(session: DocumentSession) {
         self.session = session
         documentSplitViewController = ViewerSplitViewController(session: session)
-        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 950, height: 900),
+        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 1100, height: 800),
                               styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
                               backing: .buffered, defer: false)
-        window.minSize = NSSize(width: 720, height: 500)
+        window.minSize = NSSize(width: 760, height: 560)
         window.title = "PreViewer"
         window.titleVisibility = .visible
         window.titlebarAppearsTransparent = false
         window.titlebarSeparatorStyle = .none
-        // Use a new autosave namespace so an older DjVu Preview frame cannot override
-        // the PreViewer default of 950×900 on first launch.
-        window.setFrameAutosaveName("PreViewerDocumentWindow")
+        // Use a new autosave namespace so an older compact frame cannot override
+        // the wider PreViewer default on first launch.
+        window.setFrameAutosaveName("PreViewerDocumentWindowV2")
         window.center()
         window.contentViewController = documentSplitViewController
         window.toolbarStyle = .unified
