@@ -30,7 +30,8 @@ final class DocumentSession: ObservableObject {
     var djvuBackend: DjVuDocumentBackend?
     weak var djvuView: DjVuCanvasView?
     var djvuScale: CGFloat = 1
-    var djvuFit: DjVuFit = .width
+    // Start with a sheet-like page preview; users can switch to width or manual zoom.
+    var djvuFit: DjVuFit = .page
     private var openingTask: Task<Void, Never>?
     private var djvuSearchTask: Task<Void, Never>?
     private var djvuMatchIndex = -1
