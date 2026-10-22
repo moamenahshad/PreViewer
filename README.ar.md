@@ -18,7 +18,6 @@
 
 ![إعدادات تحويل DjVu إلى PDF بالعربية](<Documentation/screenshots/DjVu-to-PDF-settings-ar.png>)
 
-![إعدادات تحويل DjVu إلى PDF بالإنجليزية](<Documentation/screenshots/DjVu-to-PDF-settings.png>)
 
 ## الإصدار الحالي
 
