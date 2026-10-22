@@ -5,7 +5,7 @@
 # PreViewer, a Mac App!
 
 <p dir="ltr">
-  <a href="#arabic">العربية</a> · <a href="README.ar.md">README عربي مستقل</a>
+  <a href="#arabic">العربية</a>
 </p>
 
 PreViewer is a lightweight, native macOS viewer for PDF and DjVu documents. It is designed for reading: open a document, browse its pages, search when text is available, select and copy text, and keep your files unchanged.
@@ -21,16 +21,6 @@ The interface follows familiar macOS Preview conventions, including a welcome wi
 ![DjVu viewer](Documentation/screenshots/djvu-viewer.png)
 
 ![DjVu to PDF export](Documentation/screenshots/DjVu-to-PDF-settings.png)
-
-Arabic interface:
-
-![Arabic welcome window](Documentation/screenshots/welcome-current-ar.png)
-
-![Arabic PDF viewer](Documentation/screenshots/PDF-viewer-ar.png)
-
-![Arabic DjVu viewer](Documentation/screenshots/djvu-viewer-ar.png)
-
-![Arabic DjVu to PDF export](<Documentation/screenshots/DjVu-to-PDF-settings-ar.png>)
 
 ## Current release
 
@@ -195,6 +185,6 @@ This is an early beta. If you find a problem, please include the macOS version, 
 
 <p><a href="Documentation/architecture.md">البنية</a> · <a href="Documentation/testing.md">دليل الاختبار</a> · <a href="Documentation/djvu.md">ملاحظات DjVu</a> · <a href="Documentation/limitations.md">القيود المعروفة</a> · <a href="Documentation/licensing.md">الترخيص</a></p>
 
-<p><a href="#english">English section</a></p>
+<p><a href="#english">English</a></p>
 
 </div>
