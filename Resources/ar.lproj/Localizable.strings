@@ -117,6 +117,7 @@
 "Estimate unavailable" = "التقدير غير متاح";
 "Approximately %@–%@" = "حوالي %@–%@";
 "Encoding page %d of %d · %ds" = "جارٍ ترميز الصفحة %d من %d · %d ث";
+"PDF exported successfully" = "تم تصدير ملف PDF بنجاح";
 "%.1f seconds" = "%.1f ثانية";
 "%+.2f MB" = "%+.2f ميجابايت";
 "%+.2f MB (%+.1f%%)" = "%+.2f ميجابايت (%+.1f%%)";

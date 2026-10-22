@@ -161,7 +161,18 @@ private struct DjVuToPDFView: View {
             }.formStyle(.grouped)
             Divider()
             HStack {
-                if !model.converting {
+                if let result = model.result {
+                    VStack(alignment:.leading,spacing:3) {
+                        Label("PDF exported successfully",systemImage:"checkmark.circle.fill")
+                            .foregroundStyle(.green)
+                        Text(result.url.lastPathComponent).font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                    }.accessibilityElement(children:.combine)
+                    Button("Open PDF") {
+                        NSDocumentController.shared.openDocument(withContentsOf:result.url,display:true) { _,_,error in
+                            if let error { NSApp.presentError(error) }
+                        }
+                    }
+                } else if !model.converting {
                     VStack(alignment:.leading,spacing:3) {
                         Text("Estimated PDF size").font(.caption).foregroundStyle(.secondary)
                         Text(model.estimateText).font(.callout).monospacedDigit()
@@ -171,7 +182,7 @@ private struct DjVuToPDFView: View {
                     VStack(alignment:.leading) {
                         ProgressView(value:Double(model.completed),total:Double(model.summary.pages.count)).frame(width:190)
                         TimelineView(.periodic(from:.now,by:1)) { context in
-                            Text("Encoding page \(min(model.completed+1,model.summary.pages.count)) of \(model.summary.pages.count) · \(Int(context.date.timeIntervalSince(model.started ?? context.date)))s").font(.caption)
+                            Text(L10n.string("Encoding page %d of %d · %ds", min(model.completed+1,model.summary.pages.count), model.summary.pages.count, Int(context.date.timeIntervalSince(model.started ?? context.date)))).font(.caption)
                         }
                     }
                 }
