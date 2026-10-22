@@ -228,6 +228,32 @@ final class DjVuCanvasView: NSView {
     @objc override func selectAll(_ sender: Any?) {
         selected = words.keys.sorted().flatMap { page in words[page]!.indices.map { (page,$0) } }; needsDisplay = true
     }
+    override func menu(for event: NSEvent) -> NSMenu? {
+        contextMenu()
+    }
+    func contextMenu() -> NSMenu {
+        let menu = NSMenu(title: "Document")
+        let copyItem = NSMenuItem(title: "Copy", action: #selector(copy(_:)), keyEquivalent: "c")
+        copyItem.target = self
+        copyItem.keyEquivalentModifierMask = [.command]
+        copyItem.isEnabled = selected.contains { page, word in words[page]?.indices.contains(word) == true }
+        menu.addItem(copyItem)
+
+        let selectAllItem = NSMenuItem(title: "Select All", action: #selector(selectAll(_:)), keyEquivalent: "a")
+        selectAllItem.target = self
+        selectAllItem.keyEquivalentModifierMask = [.command]
+        selectAllItem.isEnabled = !words.isEmpty
+        menu.addItem(selectAllItem)
+
+        menu.addItem(.separator())
+        let findItem = NSMenuItem(title: "Find…", action: #selector(findInDocument(_:)), keyEquivalent: "f")
+        findItem.target = self
+        findItem.keyEquivalentModifierMask = [.command]
+        findItem.isEnabled = session?.hasDocument == true
+        menu.addItem(findItem)
+        return menu
+    }
+    @objc private func findInDocument(_ sender: Any?) { session?.requestSearch() }
     override func viewWillMove(toWindow newWindow: NSWindow?) {
         if newWindow == nil {
             tasks.values.forEach { $0.cancel() }; tasks.removeAll(); requestIDs.removeAll(); images.removeAll()

@@ -70,6 +70,14 @@ final class DjVuTests: XCTestCase {
         XCTAssertEqual(DocumentSession.nextDjVuMatchIndex(current: 0, count: 3, backward: false), 1)
         XCTAssertEqual(DocumentSession.nextDjVuMatchIndex(current: 2, count: 3, backward: true), 1)
     }
+    func testDjVuCanvasContextMenuProvidesNativeReaderActions() {
+        let session = DocumentSession()
+        let canvas = DjVuCanvasView(session: session)
+        let menu = canvas.contextMenu()
+        XCTAssertEqual(menu.items.map(\.title), ["Copy", "Select All", "", "Find…"])
+        XCTAssertFalse(menu.items.first?.isEnabled ?? true)
+        XCTAssertFalse(menu.items.last?.isEnabled ?? true)
+    }
     func testConversionPresetsResolutionTextAndEstimate() async throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         try FileManager.default.createDirectory(at:directory,withIntermediateDirectories:true)
