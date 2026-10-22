@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.2 Beta — 2026-10-22
+
+- Added English and Arabic interface support with right-to-left layout and an in-app language setting.
+- Localized DjVu-to-PDF quality, resolution, progress, destination, and completion messages.
+- Added a clear export-complete status with a direct Open PDF action.
+- Opened document windows at a consistent 1280×720 size and restored the normal width-focused DjVu preview.
+- Updated the English and Arabic README files with release and usage information.
+
 ## 0.1.1 Beta — 2026-10-22
 
 - Added a native contextual menu to the DjVu reader for Copy, Select All, and Find.
