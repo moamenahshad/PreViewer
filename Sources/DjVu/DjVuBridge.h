@@ -5,7 +5,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)cancel;
 @end
 @interface DPDecoder : NSObject
-- (nullable instancetype)initWithURL:(NSURL *)url error:(NSError **)error;
+- (nullable instancetype)initWithURL:(NSURL *)url cancellation:(DPCancellation *)cancellation error:(NSError **)error;
 @property(nonatomic, readonly) NSInteger pageCount;
 @property(nonatomic, strong) DPCancellation *cancellation;
 @property(nonatomic, readonly) NSString *version;

@@ -130,12 +130,32 @@ final class DjVuCanvasView: NSView {
             tasks[index] = Task(priority: .userInitiated) { [weak self] in
                 do {
                     let raster = try await backend.render(index, maximumDimension: pixels)
-                    let text = try await backend.words(index)
                     try Task.checkCancellation()
                     guard self?.revision == expectedRevision, self?.requestIDs[index] == requestID else { return }
-                    self?.images[index] = raster.image
-                    self?.words[index] = text
-                    self?.setAccessibilityValue(text.map(\.text).joined(separator: " "))
+                    guard let image = raster.image else {
+                        throw CocoaError(.fileReadCorruptFile)
+                    }
+                    // Rendering is useful even when the optional text layer cannot be read.
+                    self?.images[index] = image
+                    self?.failures[index] = nil
+                    self?.needsDisplay = true
+
+                    do {
+                        let text = try await backend.words(index)
+                        try Task.checkCancellation()
+                        guard self?.revision == expectedRevision, self?.requestIDs[index] == requestID else { return }
+                        self?.words[index] = text
+                        self?.setAccessibilityValue(text.map(\.text).joined(separator: " "))
+                    } catch is CancellationError {
+                        throw CancellationError()
+                    } catch {
+                        // Keep the rendered page visible; text is an enhancement for
+                        // selection and accessibility, not a rendering prerequisite.
+                        if !Task.isCancelled, self?.revision == expectedRevision, self?.requestIDs[index] == requestID {
+                            self?.words[index] = []
+                            self?.setAccessibilityValue(nil)
+                        }
+                    }
                 } catch is CancellationError { }
                 catch {
                     if !Task.isCancelled, self?.revision == expectedRevision, self?.requestIDs[index] == requestID {

@@ -33,14 +33,18 @@ static id expression(miniexp_t e, int depth) {
     if (error) *error = [NSError errorWithDomain:@"DjVuPreview.Decoder" code:1 userInfo:@{NSLocalizedDescriptionKey:_failure ?: message}];
     return NO;
 }
-- (instancetype)initWithURL:(NSURL *)url error:(NSError **)error {
+- (instancetype)initWithURL:(NSURL *)url cancellation:(DPCancellation *)cancellation error:(NSError **)error {
     if (!(self = [super init])) return nil;
+    _cancellation = cancellation;
     _context = ddjvu_context_create("PreViewer");
     ddjvu_cache_set_size(_context, 24*1024*1024);
     _document = ddjvu_document_create_by_filename_utf8(_context, url.fileSystemRepresentation, 0);
     if (!_document) { [self fail:error message:@"Unable to open the DjVu document."]; return nil; }
     double deadline = CFAbsoluteTimeGetCurrent()+30;
     while (!ddjvu_document_decoding_done(_document) && CFAbsoluteTimeGetCurrent()<deadline && !self.cancellation.cancelled) { [self drain]; usleep(5000); }
+    if (self.cancellation.cancelled) {
+        [self fail:error message:@"DjVu opening was cancelled."]; return nil;
+    }
     if (!ddjvu_document_decoding_done(_document) || ddjvu_document_decoding_error(_document)) {
         [self fail:error message:@"DjVu header decoding failed or timed out."]; return nil;
     }
@@ -97,7 +101,13 @@ static id expression(miniexp_t e, int depth) {
     return [result isKindOfClass:NSArray.class] ? result : @[];
 }
 - (NSArray *)outline {
-    miniexp_t e = ddjvu_document_get_outline(_document);
+    miniexp_t e = miniexp_dummy;
+    double deadline = CFAbsoluteTimeGetCurrent()+30;
+    while (e == miniexp_dummy && CFAbsoluteTimeGetCurrent()<deadline && !self.cancellation.cancelled) {
+        e = ddjvu_document_get_outline(_document);
+        if (e == miniexp_dummy) { [self drain]; usleep(5000); }
+    }
+    if (e == miniexp_dummy || self.cancellation.cancelled) return @[];
     id result = expression(e,0); ddjvu_miniexp_release(_document,e);
     return [result isKindOfClass:NSArray.class] ? result : @[];
 }

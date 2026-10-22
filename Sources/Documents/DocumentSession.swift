@@ -25,6 +25,8 @@ final class DocumentSession: ObservableObject {
     @Published var djvuQuery = ""
     @Published private(set) var djvuMatches: [Int] = []
     @Published private(set) var djvuSearching = false
+    @Published private(set) var djvuSearchError: String?
+    @Published private(set) var djvuSearchIncomplete = false
     var djvuBackend: DjVuDocumentBackend?
     weak var djvuView: DjVuCanvasView?
     var djvuScale: CGFloat = 1
@@ -32,6 +34,7 @@ final class DocumentSession: ObservableObject {
     private var openingTask: Task<Void, Never>?
     private var djvuSearchTask: Task<Void, Never>?
     private var djvuMatchIndex = -1
+    private var djvuSearchRequestID = UUID()
     var isDjVu: Bool { djvuBackend != nil }
     var hasSearchMatches: Bool { isDjVu ? !djvuMatches.isEmpty : !search.matches.isEmpty }
 
@@ -58,7 +61,10 @@ final class DocumentSession: ObservableObject {
         pageNumberText = String(index+1)
     }
     func searchDjVu() {
-        djvuSearchTask?.cancel(); djvuMatches = []; djvuMatchIndex = -1
+        djvuSearchTask?.cancel(); djvuSearchRequestID = UUID()
+        let requestID = djvuSearchRequestID
+        djvuMatches = []; djvuMatchIndex = -1
+        djvuSearchError = nil; djvuSearchIncomplete = false
         let query = djvuQuery.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !query.isEmpty, let backend = djvuBackend else { djvuSearching = false; return }
         djvuSearching = true
@@ -69,11 +75,22 @@ final class DocumentSession: ObservableObject {
                     try Task.checkCancellation()
                     let text = try await backend.words(index).map(\.text).joined(separator: " ")
                     try Task.checkCancellation()
+                    guard djvuSearchRequestID == requestID else { return }
                     if text.localizedCaseInsensitiveContains(query) { djvuMatches.append(index) }
-                    if djvuMatches.count >= 500 { break }
+                    if djvuMatches.count >= 500 {
+                        djvuSearchIncomplete = true
+                        break
+                    }
                 }
+                guard djvuSearchRequestID == requestID else { return }
                 djvuSearching = false
-            } catch { if !Task.isCancelled { djvuSearching = false } }
+            } catch is CancellationError { }
+            catch {
+                guard !Task.isCancelled, djvuSearchRequestID == requestID else { return }
+                djvuSearchError = error.localizedDescription
+                djvuSearchIncomplete = true
+                djvuSearching = false
+            }
         }
     }
 
@@ -133,11 +150,17 @@ final class DocumentSession: ObservableObject {
     func revealMatch(backward: Bool = false) {
         if isDjVu {
             guard !djvuMatches.isEmpty else { return }
-            djvuMatchIndex = (djvuMatchIndex + (backward ? djvuMatches.count-1 : 1)) % djvuMatches.count
+            djvuMatchIndex = Self.nextDjVuMatchIndex(current: djvuMatchIndex, count: djvuMatches.count, backward: backward)
             go(to: djvuMatches[djvuMatchIndex]); return
         }
         guard let selection = search.advance(backward: backward) else { return }
         pdfView?.setCurrentSelection(selection, animate: true)
         pdfView?.go(to: selection)
+    }
+
+    static func nextDjVuMatchIndex(current: Int, count: Int, backward: Bool) -> Int {
+        guard count > 0 else { return -1 }
+        if current < 0 { return backward ? count - 1 : 0 }
+        return (current + (backward ? count - 1 : 1)) % count
     }
 }

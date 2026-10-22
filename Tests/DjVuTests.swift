@@ -60,6 +60,16 @@ final class DjVuTests: XCTestCase {
         for _ in 0..<200 where document.session.djvuSearching { try await Task.sleep(for:.milliseconds(20)) }
         XCTAssertEqual(document.session.djvuMatches,[0])
     }
+    func testDjVuMatchNavigationStartsAndWrapsCorrectly() {
+        XCTAssertEqual(DocumentSession.nextDjVuMatchIndex(current: -1, count: 1, backward: false), 0)
+        XCTAssertEqual(DocumentSession.nextDjVuMatchIndex(current: -1, count: 1, backward: true), 0)
+        XCTAssertEqual(DocumentSession.nextDjVuMatchIndex(current: -1, count: 3, backward: false), 0)
+        XCTAssertEqual(DocumentSession.nextDjVuMatchIndex(current: -1, count: 3, backward: true), 2)
+        XCTAssertEqual(DocumentSession.nextDjVuMatchIndex(current: 0, count: 3, backward: true), 2)
+        XCTAssertEqual(DocumentSession.nextDjVuMatchIndex(current: 2, count: 3, backward: false), 0)
+        XCTAssertEqual(DocumentSession.nextDjVuMatchIndex(current: 0, count: 3, backward: false), 1)
+        XCTAssertEqual(DocumentSession.nextDjVuMatchIndex(current: 2, count: 3, backward: true), 1)
+    }
     func testConversionPresetsResolutionTextAndEstimate() async throws {
         let directory = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
         try FileManager.default.createDirectory(at:directory,withIntermediateDirectories:true)

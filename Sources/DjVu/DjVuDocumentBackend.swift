@@ -71,8 +71,9 @@ actor DjVuDocumentBackend {
     init(url: URL) { self.url = url }
     private func engine() throws -> DPDecoder {
         if let decoder { return decoder }
-        let created = try DPDecoder(url: url)
-        created.cancellation = cancellation
+        guard !cancellation.cancelled else { throw CancellationError() }
+        let created = try DPDecoder(url: url, cancellation: cancellation)
+        guard !cancellation.cancelled else { throw CancellationError() }
         decoder = created
         return created
     }
@@ -84,6 +85,7 @@ actor DjVuDocumentBackend {
         var pages: [DjVuPageInfo] = []
         for index in 0..<engine.pageCount {
             try Task.checkCancellation()
+            guard !cancellation.cancelled else { throw CancellationError() }
             let raw = try engine.pageInfo(index)
             func number(_ key: String) -> Int { (raw[key] as? NSNumber)?.intValue ?? 0 }
             guard number("width") > 0, number("height") > 0 else { throw CocoaError(.fileReadCorruptFile) }
