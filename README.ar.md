@@ -10,6 +10,18 @@ PreViewer هو تطبيق macOS أصلي وخفيف لعرض مستندات PDF 
 
 <img width="732" height="824" alt="نافذة ترحيب PreViewer" src="https://github.com/user-attachments/assets/0d779d16-7ca6-4bb4-bf0a-847a3727630b" />
 
+## لقطات الشاشة
+
+![نافذة الترحيب بالعربية](Documentation/screenshots/welcome-current-ar.png)
+
+![عارض PDF بالعربية](Documentation/screenshots/PDF-viewer-ar.png)
+
+![عارض DjVu بالعربية](Documentation/screenshots/djvu-viewer-ar.png)
+
+![إعدادات تحويل DjVu إلى PDF بالعربية](<Documentation/screenshots/DjVu-to-PDF-settings-ar.png>)
+
+![إعدادات تحويل DjVu إلى PDF بالإنجليزية](<Documentation/screenshots/DjVu-to-PDF-settings.png>)
+
 ## الإصدار الحالي
 
 **PreViewer 0.1.2 Beta** متوفر حاليًا لأجهزة Mac التي تعمل بمعمارية Intel.

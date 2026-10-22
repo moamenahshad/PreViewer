@@ -18,6 +18,16 @@ The interface follows familiar macOS Preview conventions, including a welcome wi
 
 ![DjVu to PDF export](Documentation/screenshots/DjVu-to-PDF-settings.png)
 
+Arabic interface:
+
+![Arabic welcome window](Documentation/screenshots/welcome-current-ar.png)
+
+![Arabic PDF viewer](Documentation/screenshots/PDF-viewer-ar.png)
+
+![Arabic DjVu viewer](Documentation/screenshots/djvu-viewer-ar.png)
+
+![Arabic DjVu to PDF export](<Documentation/screenshots/DjVu-to-PDF-settings-ar.png>)
+
 ## Current release
 
 **PreViewer 0.1.2 Beta** is currently available for Intel-based Macs.
