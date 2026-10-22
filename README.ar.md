@@ -4,11 +4,19 @@
 
 [English](README.md)
 
-PreViewer هو تطبيق macOS أصلي وخفيف لعرض مستندات PDF وDjVu. صُمم للقراءة: افتح المستند، تصفح الصفحات، ابحث عندما يتوفر نص، حدد النص وانسخه، واترك ملفاتك دون تعديل.
+تطبيق PreViewer هو تطبيق macOS أصلي وخفيف لعرض مستندات PDF وDjVu. صُمم للقراءة: افتح المستند، تصفح الصفحات، ابحث عندما يتوفر نص، حدد النص وانسخه، واترك ملفاتك دون تعديل.
 
 تتبع الواجهة أسلوب Preview المألوف في macOS، مع نافذة ترحيب، والمستندات الأخيرة، والصور المصغرة، والتمرير المستمر، وأدوات التكبير، والقوائم الأصلية، والسحب والإفلات، والمظهرين الفاتح والداكن.
 
-<img width="732" height="824" alt="نافذة ترحيب PreViewer" src="https://github.com/user-attachments/assets/0d779d16-7ca6-4bb4-bf0a-847a3727630b" />
+# لقطات شاشة
+
+![Welcome window](Documentation/screenshots/welcome-current-ar.png)
+
+![PDF viewer](Documentation/screenshots/PDF-viewer-ar.png)
+
+![DjVu viewer](Documentation/screenshots/djvu-viewer-ar.png)
+
+![DjVu to PDF export](Documentation/screenshots/DjVu-to-PDF-settings-ar.png)
 
 ## لقطات الشاشة
 
@@ -24,7 +32,7 @@ PreViewer هو تطبيق macOS أصلي وخفيف لعرض مستندات PDF 
 
 ## الإصدار الحالي
 
-**PreViewer 0.1.2 Beta** متوفر حاليًا لأجهزة Mac التي تعمل بمعمارية Intel.
+تطبيق **PreViewer 0.1.2 Beta** متوفر حاليًا لأجهزة Mac التي تعمل بمعمارية Intel.
 
 نزّل ملف ZIP من [صفحة الإصدارات في GitHub](https://github.com/moamenahshad/PreViewer/releases)، وافتحه، ثم اسحب `PreViewer.app` إلى مجلد Applications. الإصدار التجريبي غير موثق بتوقيع Apple Developer مدفوع، لذلك قد يطلب macOS تأكيد الفتح في المرة الأولى.
 
@@ -49,7 +57,7 @@ PreViewer هو تطبيق macOS أصلي وخفيف لعرض مستندات PDF 
 يركز PreViewer حاليًا على القراءة وتصدير DjVu إلى PDF. الميزات التالية غير متوفرة في هذا الإصدار:
 
 - التحويل من PDF إلى DjVu
-- OCR
+- تقنية OCR
 - التعليقات والتحرير
 - ضغط MRC
 - فتح ملفات PDF المحمية التي تتطلب كلمة مرور
@@ -58,7 +66,7 @@ PreViewer هو تطبيق macOS أصلي وخفيف لعرض مستندات PDF 
 ## متطلبات النظام
 
 - جهاز Mac بمعمارية Intel (`x86_64`)
-- macOS 26 أو أحدث
+- نظام macOS 26 أو أحدث
 - لا يحتاج المستخدم إلى Homebrew أو MacPorts أو أدوات سطر أوامر لتشغيل التطبيق
 
 هدف النشر الحالي هو macOS 26 لأن مكتبات DjVu الأصلية المضمنة تتطلبه. سيُدرس دعم Apple Silicon بعد نضج إصدار Intel وقارئ المستندات.

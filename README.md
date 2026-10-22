@@ -2,7 +2,9 @@
 
 # PreViewer, a Mac App!
 
-[العربية](README.ar.md)
+<p dir="ltr">
+  <a href="README.ar.md">العربية</a>
+</p>
 
 PreViewer is a lightweight, native macOS viewer for PDF and DjVu documents. It is designed for reading: open a document, browse its pages, search when text is available, select and copy text, and keep your files unchanged.
 
