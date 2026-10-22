@@ -1,6 +1,10 @@
+<img width="76" height="76" alt="PreViewer-iOS-Default-76@1x" src="https://github.com/user-attachments/assets/62a7305d-c1c2-4c68-bf42-c1c8ed8e8e97" />
+
 # PreViewer
 
 PreViewer is an independent native macOS document viewer using Swift 6, AppKit, SwiftUI and PDFKit, with a separate DjVuLibre backend for DjVu reading and DjVu-to-PDF export. No proprietary converter or Apple Preview resources or code are included.
+
+<img width="732" height="824" alt="welcome-current" src="https://github.com/user-attachments/assets/0d779d16-7ca6-4bb4-bf0a-847a3727630b" />
 
 ## Requirements and build
 
