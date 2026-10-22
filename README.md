@@ -1,9 +1,11 @@
 <img width="76" height="76" alt="PreViewer icon" src="https://github.com/user-attachments/assets/62a7305d-c1c2-4c68-bf42-c1c8ed8e8e97" />
 
+<a id="english"></a>
+
 # PreViewer, a Mac App!
 
 <p dir="ltr">
-  <a href="README.ar.md">العربية</a>
+  <a href="#arabic">العربية</a> · <a href="README.ar.md">README عربي مستقل</a>
 </p>
 
 PreViewer is a lightweight, native macOS viewer for PDF and DjVu documents. It is designed for reading: open a document, browse its pages, search when text is available, select and copy text, and keep your files unchanged.
@@ -131,3 +133,68 @@ PreViewer does not include Apple Preview resources or proprietary converter code
 ## Feedback
 
 This is an early beta. If you find a problem, please include the macOS version, Mac architecture, file type, and the steps that reproduced it in a GitHub issue.
+
+---
+
+<div dir="rtl" lang="ar" align="right">
+
+<h1 id="arabic">PreViewer — العربية</h1>
+
+<p>PreViewer تطبيق macOS أصلي وخفيف لعرض مستندات PDF وDjVu. صُمم للقراءة: افتح المستند، تصفح الصفحات، ابحث عندما يتوفر نص، حدد النص وانسخه، واترك ملفاتك دون تعديل.</p>
+
+<p>يوفر التطبيق نافذة ترحيب، والمستندات الأخيرة، والصور المصغرة، والتمرير المستمر، وأدوات التكبير، والقوائم الأصلية، والسحب والإفلات، والمظهرين الفاتح والداكن.</p>
+
+<h2>لقطات الشاشة العربية</h2>
+
+<p><img alt="نافذة الترحيب بالعربية" src="Documentation/screenshots/welcome-current-ar.png" /></p>
+<p><img alt="عارض PDF بالعربية" src="Documentation/screenshots/PDF-viewer-ar.png" /></p>
+<p><img alt="عارض DjVu بالعربية" src="Documentation/screenshots/djvu-viewer-ar.png" /></p>
+<p><img alt="إعدادات تحويل DjVu إلى PDF بالعربية" src="Documentation/screenshots/DjVu-to-PDF-settings-ar.png" /></p>
+
+<h2>الإصدار الحالي</h2>
+
+<p><strong>PreViewer 0.1.2 Beta</strong> متوفر لأجهزة Mac بمعمارية Intel.</p>
+
+<p>نزّل ملف ZIP من <a href="https://github.com/moamenahshad/PreViewer/releases">صفحة الإصدارات</a>، وافتحه، ثم اسحب <code>PreViewer.app</code> إلى مجلد Applications.</p>
+
+<p>هذا الإصدار التجريبي غير موثق بتوقيع Apple Developer مدفوع. إذا عرض macOS رسالة أمان، افتح <strong>System Settings → Privacy &amp; Security</strong> ثم اختر <strong>Open Anyway</strong> لتأكيد الفتح.</p>
+
+<h2>الميزات</h2>
+
+<ul>
+<li>عرض ملفات PDF و<code>.djvu</code> و<code>.djv</code>.</li>
+<li>تصفح الصفحات عبر شريط الصور المصغرة والتمرير المستمر.</li>
+<li>التكبير والتصغير والحجم الفعلي وملاءمة النافذة.</li>
+<li>البحث في نص PDF ونص DjVu المتاح.</li>
+<li>تحديد النص ونسخه من مستندات DjVu التي تحتوي على مناطق كلمات.</li>
+<li>دعم العربية والإنجليزية مع تخطيط RTL للعربية.</li>
+<li>دعم المظهر الفاتح والداكن والقوائم والاختصارات الأصلية.</li>
+<li>قراءة فقط؛ لا يتم تعديل الملفات المصدر.</li>
+<li>تصدير DjVu إلى PDF مع خيارات الجودة والدقة.</li>
+</ul>
+
+<h2>ما لم يُنفذ بعد</h2>
+
+<ul>
+<li>التحويل من PDF إلى DjVu.</li>
+<li>OCR والتعليقات والتحرير.</li>
+<li>ضغط MRC.</li>
+<li>فتح ملفات PDF المحمية التي تتطلب كلمة مرور.</li>
+<li>دعم Apple Silicon.</li>
+</ul>
+
+<h2>متطلبات النظام</h2>
+
+<ul>
+<li>جهاز Mac بمعمارية Intel (<code>x86_64</code>).</li>
+<li>macOS 26 أو أحدث.</li>
+<li>لا يحتاج المستخدم إلى Homebrew أو MacPorts لتشغيل التطبيق.</li>
+</ul>
+
+<h2>التوثيق</h2>
+
+<p><a href="Documentation/architecture.md">البنية</a> · <a href="Documentation/testing.md">دليل الاختبار</a> · <a href="Documentation/djvu.md">ملاحظات DjVu</a> · <a href="Documentation/limitations.md">القيود المعروفة</a> · <a href="Documentation/licensing.md">الترخيص</a></p>
+
+<p><a href="#english">English section</a></p>
+
+</div>
