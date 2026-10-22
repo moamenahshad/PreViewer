@@ -30,7 +30,8 @@ static id expression(miniexp_t e, int depth) {
     }
 }
 - (BOOL)fail:(NSError **)error message:(NSString *)message {
-    if (error) *error = [NSError errorWithDomain:@"DjVuPreview.Decoder" code:1 userInfo:@{NSLocalizedDescriptionKey:_failure ?: message}];
+    NSString *localizedMessage = NSLocalizedString(message, @"");
+    if (error) *error = [NSError errorWithDomain:@"DjVuPreview.Decoder" code:1 userInfo:@{NSLocalizedDescriptionKey:_failure ?: localizedMessage}];
     return NO;
 }
 - (instancetype)initWithURL:(NSURL *)url cancellation:(DPCancellation *)cancellation error:(NSError **)error {

@@ -184,7 +184,7 @@ final class DjVuCanvasView: NSView {
                 context.draw(image, in: CGRect(x: -size.width/2, y: -size.height/2, width: size.width, height: size.height))
                 context.restoreGState()
             } else {
-                let message = failures[index] ?? "Loading page \(index+1)…"
+                let message = failures[index] ?? L10n.string("Loading page %d…", index + 1)
                 (message as NSString).draw(in: rect.insetBy(dx: 24, dy: 24), withAttributes: [.foregroundColor: NSColor.darkGray])
             }
         }
@@ -232,21 +232,21 @@ final class DjVuCanvasView: NSView {
         contextMenu()
     }
     func contextMenu() -> NSMenu {
-        let menu = NSMenu(title: "Document")
-        let copyItem = NSMenuItem(title: "Copy", action: #selector(copy(_:)), keyEquivalent: "c")
+        let menu = NSMenu(title: L10n.string("Document"))
+        let copyItem = NSMenuItem(title: L10n.string("Copy"), action: #selector(copy(_:)), keyEquivalent: "c")
         copyItem.target = self
         copyItem.keyEquivalentModifierMask = [.command]
         copyItem.isEnabled = selected.contains { page, word in words[page]?.indices.contains(word) == true }
         menu.addItem(copyItem)
 
-        let selectAllItem = NSMenuItem(title: "Select All", action: #selector(selectAll(_:)), keyEquivalent: "a")
+        let selectAllItem = NSMenuItem(title: L10n.string("Select All"), action: #selector(selectAll(_:)), keyEquivalent: "a")
         selectAllItem.target = self
         selectAllItem.keyEquivalentModifierMask = [.command]
         selectAllItem.isEnabled = !words.isEmpty
         menu.addItem(selectAllItem)
 
         menu.addItem(.separator())
-        let findItem = NSMenuItem(title: "Find…", action: #selector(findInDocument(_:)), keyEquivalent: "f")
+        let findItem = NSMenuItem(title: L10n.string("Find…"), action: #selector(findInDocument(_:)), keyEquivalent: "f")
         findItem.target = self
         findItem.keyEquivalentModifierMask = [.command]
         findItem.isEnabled = session?.hasDocument == true

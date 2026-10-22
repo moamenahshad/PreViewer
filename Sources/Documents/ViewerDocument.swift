@@ -29,12 +29,12 @@ final class ViewerDocument: NSDocument {
     private func loadPDF(from url: URL) throws {
         guard let pdf = PDFDocument(url: url) else {
             throw NSError(domain: "DjVuPreview", code: 1, userInfo: [
-                NSLocalizedDescriptionKey: "The PDF could not be opened. It may be damaged or inaccessible."
+                NSLocalizedDescriptionKey: NSLocalizedString("The PDF could not be opened. It may be damaged or inaccessible.", comment: "")
             ])
         }
         guard !pdf.isLocked else {
             throw NSError(domain: "DjVuPreview", code: 2, userInfo: [
-                NSLocalizedDescriptionKey: "This PDF requires a password. Password-protected documents are not supported in this milestone."
+                NSLocalizedDescriptionKey: NSLocalizedString("This PDF requires a password. Password-protected documents are not supported in this milestone.", comment: "")
             ])
         }
         session.attach(pdf, url: url)

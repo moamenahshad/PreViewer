@@ -30,6 +30,7 @@ struct SearchBar: View {
         .padding(10)
         .background(.bar)
         .onAppear { focused = true }
+        .environment(\.layoutDirection, L10n.isArabic ? .rightToLeft : .leftToRight)
         .onChange(of: session.searchFocusRequest) { _, _ in focused = true }
     }
 

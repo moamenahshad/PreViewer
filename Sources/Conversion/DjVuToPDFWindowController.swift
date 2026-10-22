@@ -28,16 +28,16 @@ final class DjVuToPDFModel: ObservableObject {
     var proposedName: String { source.deletingPathExtension().lastPathComponent + ".pdf" }
     static func size(_ bytes: Int64) -> String { ByteCountFormatter.string(fromByteCount:bytes,countStyle:.file) }
     var estimateText: String {
-        if estimating { return "Estimating…" }
-        guard let estimate else { return "Estimate unavailable" }
-        return "Approximately \(Self.size(estimate.lower))–\(Self.size(estimate.upper))"
+        if estimating { return L10n.string("Estimating…") }
+        guard let estimate else { return L10n.string("Estimate unavailable") }
+        return L10n.string("Approximately %@–%@", Self.size(estimate.lower), Self.size(estimate.upper))
     }
     func chooseDestination(window: NSWindow?) {
         guard let window else { return }
         let panel = NSSavePanel()
         panel.allowedContentTypes = [.pdf]
         panel.nameFieldStringValue = proposedName
-        panel.prompt = "Choose Destination"
+            panel.prompt = L10n.string("Choose Destination")
         panel.beginSheetModal(for:window) { [weak self] response in
             if response == .OK { self?.destination = panel.url }
         }
@@ -86,7 +86,7 @@ final class DjVuToPDFWindowController: NSWindowController, NSWindowDelegate {
     init(source: URL, summary: DjVuSummary) {
         model = DjVuToPDFModel(source:source,summary:summary)
         let window = NSWindow(contentRect:NSRect(x:0,y:0,width:620,height:760),styleMask:[.titled,.closable,.miniaturizable,.resizable],backing:.buffered,defer:false)
-        window.title = "DjVu to PDF"
+        window.title = L10n.string("DjVu to PDF")
         window.minSize = NSSize(width:520,height:560)
         window.isReleasedWhenClosed = false
         super.init(window:window)
@@ -150,7 +150,7 @@ private struct DjVuToPDFView: View {
                         LabeledContent("Actual PDF size",value:DjVuToPDFModel.size(result.bytes))
                         LabeledContent("Original DjVu",value:DjVuToPDFModel.size(model.sourceBytes))
                         LabeledContent("Size change",value:difference(result))
-                        LabeledContent("Duration",value:String(format:"%.1f seconds",result.duration))
+                        LabeledContent("Duration",value:L10n.string("%.1f seconds", result.duration))
                         Text(result.url.path).font(.caption).textSelection(.enabled)
                         HStack {
                             Button("Open PDF") { NSDocumentController.shared.openDocument(withContentsOf:result.url,display:true) { _,_,error in if let error { NSApp.presentError(error) } } }
@@ -181,6 +181,7 @@ private struct DjVuToPDFView: View {
             }.padding()
         }
         .onChange(of:model.options) { _,_ in model.recalculate() }
+        .environment(\.layoutDirection, L10n.isArabic ? .rightToLeft : .leftToRight)
         .alert("Unable to Convert",isPresented:Binding(get:{model.error != nil},set:{if !$0 { model.error = nil }})) {
             Button("OK") { model.error = nil }
         } message: { Text(model.error ?? "") }
@@ -188,7 +189,7 @@ private struct DjVuToPDFView: View {
     private func difference(_ result: DjVuConversionResult) -> String {
         let delta = result.bytes-model.sourceBytes
         let megabytes = Double(delta)/1_000_000
-        guard model.sourceBytes > 0 else { return String(format:"%+.2f MB",megabytes) }
-        return String(format:"%+.2f MB (%+.1f%%)",megabytes,Double(delta)/Double(model.sourceBytes)*100)
+        guard model.sourceBytes > 0 else { return L10n.string("%+.2f MB", megabytes) }
+        return L10n.string("%+.2f MB (%+.1f%%)", megabytes, Double(delta)/Double(model.sourceBytes)*100)
     }
 }

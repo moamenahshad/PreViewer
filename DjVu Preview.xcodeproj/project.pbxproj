@@ -27,6 +27,7 @@
 		B6ABCDFD1491C27CA281F87A /* Sources/Search/PDFSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2B36A92611A0AC79415B15 /* Sources/Search/PDFSearchController.swift */; };
 		E5E785BF9650BB644882AEB7 /* Sources/Documents/ViewerDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB446821B0D25A3CA219DDF3 /* Sources/Documents/ViewerDocument.swift */; };
 		E640FB272AF73AAD9899D8C0 /* Sources/App/DjVuPreviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164B1865FDA0A03ABDE5C064 /* Sources/App/DjVuPreviewApp.swift */; };
+		F1A6C8D1A7B24E1F9C6D1023 /* Sources/App/Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A6C8D1A7B24E1F9C6D1022 /* Sources/App/Localization.swift */; };
 		EEA8C845BDCDDAF2130DC1BE /* Sources/Conversion/DjVuToPDFWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461BD372BCA7D30F49E0415 /* Sources/Conversion/DjVuToPDFWindowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		E23AE83D3C967EF3449515C4 /* Sources/Documents/DocumentSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/Documents/DocumentSession.swift; sourceTree = SOURCE_ROOT; };
 		E3E65F000E9DD4E0F5EBFB98 /* Tests/DjVuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/DjVuTests.swift; sourceTree = SOURCE_ROOT; };
 		F114BE865659DAB8A971ABFD /* Sources/UI/ThumbnailSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/UI/ThumbnailSidebar.swift; sourceTree = SOURCE_ROOT; };
+		F1A6C8D1A7B24E1F9C6D1022 /* Sources/App/Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources/App/Localization.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				D108F3EA311A72F7458DA309 /* Sources/UI/WelcomeWindow.swift */,
 				74ACB2AB73570A6C966C4E05 /* Sources/Documents/ViewerDocumentController.swift */,
 				164B1865FDA0A03ABDE5C064 /* Sources/App/DjVuPreviewApp.swift */,
+				F1A6C8D1A7B24E1F9C6D1022 /* Sources/App/Localization.swift */,
 				E23AE83D3C967EF3449515C4 /* Sources/Documents/DocumentSession.swift */,
 				CB446821B0D25A3CA219DDF3 /* Sources/Documents/ViewerDocument.swift */,
 				BE9651CB7871220AC4404B54 /* Sources/Navigation/PageNavigation.swift */,
@@ -172,6 +175,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ar,
 				Base,
 			);
 			mainGroup = B28B7AF69320201D1CF206EB;
@@ -197,7 +201,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"; cp \"$SRCROOT/Vendor/DjVuLibre/\"*.dylib \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/\"; mkdir -p \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Licenses\"; cp \"$SRCROOT/Vendor/DjVuLibre/\"*.md \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Licenses/\"; cp \"$SRCROOT/PreViewer.png\" \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/PreViewer.png\"";
+			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH\"; cp \"$SRCROOT/Vendor/DjVuLibre/\"*.dylib \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/\"; mkdir -p \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Licenses\"; cp \"$SRCROOT/Vendor/DjVuLibre/\"*.md \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Licenses/\"; cp \"$SRCROOT/PreViewer.png\" \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/PreViewer.png\"; mkdir -p \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/ar.lproj\"; cp \"$SRCROOT/Resources/ar.lproj/Localizable.strings\" \"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/ar.lproj/Localizable.strings\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -224,6 +228,7 @@
 				2CC28E1F650F77697D825D81 /* Sources/UI/WelcomeWindow.swift in Sources */,
 				A022F33D5AA9537E6998B452 /* Sources/Documents/ViewerDocumentController.swift in Sources */,
 				E640FB272AF73AAD9899D8C0 /* Sources/App/DjVuPreviewApp.swift in Sources */,
+				F1A6C8D1A7B24E1F9C6D1023 /* Sources/App/Localization.swift in Sources */,
 				0B4CCB19E27CAC0BCBD3EC6C /* Sources/Documents/DocumentSession.swift in Sources */,
 				E5E785BF9650BB644882AEB7 /* Sources/Documents/ViewerDocument.swift in Sources */,
 				8897615B15DC8C31C4DBA798 /* Sources/Navigation/PageNavigation.swift in Sources */,

@@ -54,12 +54,12 @@ final class ViewerWindowController: NSWindowController, NSMenuItemValidation, NS
         case "sidebar":
             let item = NSMenuToolbarItem(itemIdentifier: identifier)
             item.visibilityPriority = .high
-            item.label = "View"
-            item.toolTip = "Show or Hide Thumbnails (⌥⌘1)"
-            item.image = NSImage(systemSymbolName: "sidebar.leading", accessibilityDescription: "Sidebar")
+            item.label = L10n.string("View")
+            item.toolTip = L10n.string("Show or Hide Thumbnails (⌥⌘1)")
+            item.image = NSImage(systemSymbolName: "sidebar.leading", accessibilityDescription: L10n.string("Sidebar"))
             item.isBordered = true
-            let menu = NSMenu(title: "View")
-            let toggle = menu.addItem(withTitle: "Toggle Thumbnails", action: #selector(toggleSidebar(_:)), keyEquivalent: "")
+            let menu = NSMenu(title: L10n.string("View"))
+            let toggle = menu.addItem(withTitle: L10n.string("Toggle Thumbnails"), action: #selector(toggleSidebar(_:)), keyEquivalent: "")
             toggle.target = self
             item.menu = menu
             return item
@@ -80,9 +80,9 @@ final class ViewerWindowController: NSWindowController, NSMenuItemValidation, NS
     private func button(_ identifier: NSToolbarItem.Identifier, label: String, symbol: String, action: Selector) -> NSToolbarItem {
         let item = NSToolbarItem(itemIdentifier: identifier)
         item.visibilityPriority = identifier.rawValue == "search" ? .high : .low
-        item.label = label
-        item.toolTip = label
-        item.image = NSImage(systemSymbolName: symbol, accessibilityDescription: label)
+        item.label = L10n.string(label)
+        item.toolTip = L10n.string(label)
+        item.image = NSImage(systemSymbolName: symbol, accessibilityDescription: L10n.string(label))
         item.target = self
         item.action = action
         item.isBordered = true
@@ -90,31 +90,32 @@ final class ViewerWindowController: NSWindowController, NSMenuItemValidation, NS
     }
 
     private func group(_ identifier: NSToolbarItem.Identifier, label: String, symbols: [String], labels: [String], actions: [Selector], action: Selector) -> NSToolbarItemGroup {
-        let images = zip(symbols, labels).map { NSImage(systemSymbolName: $0.0, accessibilityDescription: $0.1)! }
+        let localizedLabels = labels.map { L10n.string($0) }
+        let images = zip(symbols, localizedLabels).map { NSImage(systemSymbolName: $0.0, accessibilityDescription: $0.1)! }
         let item = NSToolbarItemGroup(itemIdentifier: identifier, images: images, selectionMode: .momentary,
-                                      labels: labels, target: self, action: action)
-        item.label = label
-        item.title = label
+                                      labels: localizedLabels, target: self, action: action)
+        item.label = L10n.string(label)
+        item.title = L10n.string(label)
         item.image = images[0]
         item.visibilityPriority = identifier.rawValue == "navigation" ? .high : .low
         item.isBordered = true
         item.controlRepresentation = .automatic
         // Explicit commands also work when AppKit moves the group into overflow.
-        let menu = NSMenu(title: label)
+        let menu = NSMenu(title: L10n.string(label))
         for (index, child) in item.subitems.enumerated() {
-            child.toolTip = labels[index]
-            let command = menu.addItem(withTitle: labels[index], action: actions[index], keyEquivalent: "")
+            child.toolTip = localizedLabels[index]
+            let command = menu.addItem(withTitle: localizedLabels[index], action: actions[index], keyEquivalent: "")
             command.target = self
             command.image = images[index]
         }
-        let representation = NSMenuItem(title: label, action: nil, keyEquivalent: "")
+        let representation = NSMenuItem(title: L10n.string(label), action: nil, keyEquivalent: "")
         representation.submenu = menu
         item.menuFormRepresentation = representation
         return item
     }
 
     private func updateToolbarState() {
-        window?.subtitle = session.hasDocument ? "Page \(session.currentPageIndex + 1) of \(session.pageCount)" : ""
+        window?.subtitle = session.hasDocument ? L10n.string("Page %d of %d", session.currentPageIndex + 1, session.pageCount) : ""
         window?.toolbar?.validateVisibleItems()
         for item in window?.toolbar?.items ?? [] {
             guard let group = item as? NSToolbarItemGroup else { continue }
