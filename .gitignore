@@ -1,8 +1,10 @@
 Build/
 BuildArabic/
+BuildRelease/
 .DS_Store
 xcuserdata/
 *.xcuserstate
 DerivedData/
 
 PreViewer-0.1.1-beta-intel.zip
+PreViewer-0.1.2-beta-intel.zip
