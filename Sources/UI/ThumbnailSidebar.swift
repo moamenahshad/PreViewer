@@ -41,6 +41,7 @@ struct ThumbnailSidebar: View {
             }
         }
         .accessibilityLabel("Page thumbnails")
+        .environment(\.layoutDirection, L10n.isArabic ? .rightToLeft : .leftToRight)
         .dropDestination(for: URL.self) { urls, _ in
             let pdfs = urls.filter { $0.isFileURL && ["pdf", "djvu", "djv"].contains($0.pathExtension.lowercased()) }
             for url in pdfs {

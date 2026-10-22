@@ -16,6 +16,7 @@ enum DjVuPreviewApp {
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
     let documents: ViewerDocumentController
+    private var settingsController: SettingsWindowController?
     init(documents: ViewerDocumentController) { self.documents = documents; super.init() }
 
     func applicationWillFinishLaunching(_ notification: Notification) {
@@ -23,6 +24,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        AppSettings.shared.applyTheme()
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
 
@@ -52,27 +54,34 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func showWelcome(_ sender: Any?) {
         documents.showWelcomeIfNeeded()
     }
+    @objc func showSettings(_ sender: Any?) {
+        if settingsController == nil { settingsController = SettingsWindowController() }
+        settingsController?.showWindow(nil)
+        settingsController?.window?.makeKeyAndOrderFront(nil)
+    }
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool { false }
 
     private func makeMenu() -> NSMenu {
         let menu = NSMenu()
         func submenu(_ title: String) -> NSMenu {
-            let item = NSMenuItem(title: title, action: nil, keyEquivalent: "")
-            let child = NSMenu(title: title)
+            let localizedTitle = L10n.string(title)
+            let item = NSMenuItem(title: localizedTitle, action: nil, keyEquivalent: "")
+            let child = NSMenu(title: localizedTitle)
             item.submenu = child
             menu.addItem(item)
             return child
         }
         func item(_ menu: NSMenu, _ title: String, _ action: Selector, _ key: String = "",
                   _ modifiers: NSEvent.ModifierFlags = .command) {
-            let entry = menu.addItem(withTitle: title, action: action, keyEquivalent: key)
+            let entry = menu.addItem(withTitle: L10n.string(title), action: action, keyEquivalent: key)
             entry.keyEquivalentModifierMask = modifiers
         }
         let app = submenu("PreViewer")
         item(app, "About PreViewer", #selector(NSApplication.orderFrontStandardAboutPanel(_:)))
+        item(app, "Settings…", #selector(showSettings(_:)), ",")
         app.addItem(.separator())
-        let services = NSMenu(title: "Services")
-        let servicesItem = app.addItem(withTitle: "Services", action: nil, keyEquivalent: "")
+        let services = NSMenu(title: L10n.string("Services"))
+        let servicesItem = app.addItem(withTitle: L10n.string("Services"), action: nil, keyEquivalent: "")
         servicesItem.submenu = services
         NSApplication.shared.servicesMenu = services
         app.addItem(.separator())
@@ -82,7 +91,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         app.addItem(.separator())
         item(app, "Quit PreViewer", #selector(NSApplication.terminate(_:)), "q")
         let file = submenu("File")
-        let welcomeItem = file.addItem(withTitle: "Welcome", action: #selector(ViewerDocumentController.welcomeShortcut(_:)), keyEquivalent: "n")
+        let welcomeItem = file.addItem(withTitle: L10n.string("Welcome"), action: #selector(ViewerDocumentController.welcomeShortcut(_:)), keyEquivalent: "n")
         welcomeItem.keyEquivalentModifierMask = [.command]
         welcomeItem.target = documents
         item(file, "Open…", #selector(NSDocumentController.openDocument(_:)), "o")

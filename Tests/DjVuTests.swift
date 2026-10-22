@@ -74,7 +74,8 @@ final class DjVuTests: XCTestCase {
         let session = DocumentSession()
         let canvas = DjVuCanvasView(session: session)
         let menu = canvas.contextMenu()
-        XCTAssertEqual(menu.items.map(\.title), ["Copy", "Select All", "", "Find…"])
+        let expectedTitles = [L10n.string("Copy"), L10n.string("Select All"), "", L10n.string("Find…")]
+        XCTAssertEqual(menu.items.map(\.title), expectedTitles)
         XCTAssertFalse(menu.items.first?.isEnabled ?? true)
         XCTAssertFalse(menu.items.last?.isEnabled ?? true)
     }

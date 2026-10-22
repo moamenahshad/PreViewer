@@ -32,7 +32,7 @@ actor DjVuToPDFConverter {
     func convert(to destination: URL, options: DjVuToPDFOptions,
                  pages requested: [Int]? = nil, progress: @Sendable (Int, Int) async -> Void = { _,_ in }) async throws -> DjVuConversionResult {
         guard destination.standardizedFileURL.resolvingSymlinksInPath() != backend.url.standardizedFileURL.resolvingSymlinksInPath() else {
-            throw NSError(domain: "DjVuPreview.Export", code: 1, userInfo: [NSLocalizedDescriptionKey: "Choose a PDF destination different from the original DjVu document."])
+            throw NSError(domain: "DjVuPreview.Export", code: 1, userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("Choose a PDF destination different from the original DjVu document.", comment: "")])
         }
         let started = Date()
         let summary = try await backend.prepare()
@@ -101,7 +101,7 @@ actor DjVuToPDFConverter {
         }
         context.closePDF(); closed = true
         guard let verified = CGPDFDocument(temporary as CFURL), verified.numberOfPages == indices.count else {
-            throw NSError(domain: "DjVuPreview.Export", code: 2, userInfo: [NSLocalizedDescriptionKey: "The PDF could not be finalized. Check available disk space and destination permissions."])
+            throw NSError(domain: "DjVuPreview.Export", code: 2, userInfo: [NSLocalizedDescriptionKey: NSLocalizedString("The PDF could not be finalized. Check available disk space and destination permissions.", comment: "")])
         }
         try Task.checkCancellation()
         guard !backend.cancellation.cancelled else { throw CancellationError() }

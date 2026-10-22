@@ -95,7 +95,7 @@ final class ViewerTests: XCTestCase {
                        [#selector(controller.zoomOut(_:)), #selector(controller.actualSize(_:)), #selector(controller.zoomIn(_:))])
         XCTAssertFalse(toolbar.items.contains { $0.itemIdentifier.rawValue == "page" })
         XCTAssertFalse(controller.toolbarAllowedItemIdentifiers(toolbar).contains(.init("page")))
-        XCTAssertEqual(window.subtitle, "Page 1 of 2")
+        XCTAssertEqual(window.subtitle, L10n.string("Page %d of %d", 1, 2))
         let sidebar = try XCTUnwrap(toolbar.items.first { $0.itemIdentifier.rawValue == "sidebar" } as? NSMenuToolbarItem)
         XCTAssertTrue(sidebar.isBordered)
         XCTAssertNil(sidebar.action) // One menu affordance, matching the observed View menu.
@@ -119,7 +119,7 @@ final class ViewerTests: XCTestCase {
                 window.title = "Toolbar Validation \(appearance.rawValue) \(width)"
                 try await Task.sleep(for: .seconds(3))
                 XCTAssertEqual(Int(window.frame.width), width)
-                XCTAssertEqual(window.subtitle, "Page 1 of 4")
+                XCTAssertEqual(window.subtitle, L10n.string("Page %d of %d", 1, 4))
                 let toolbar = try XCTUnwrap(window.toolbar)
                 XCTAssertFalse(toolbar.items.contains { $0.itemIdentifier.rawValue == "page" })
                 for group in toolbar.items.compactMap({ $0 as? NSToolbarItemGroup }) {
@@ -130,10 +130,10 @@ final class ViewerTests: XCTestCase {
         }
         controller.nextPage(nil)
         try await Task.sleep(for: .milliseconds(100))
-        XCTAssertEqual(window.subtitle, "Page 2 of 4")
+        XCTAssertEqual(window.subtitle, L10n.string("Page %d of %d", 2, 4))
         controller.previousPage(nil)
         try await Task.sleep(for: .milliseconds(100))
-        XCTAssertEqual(window.subtitle, "Page 1 of 4")
+        XCTAssertEqual(window.subtitle, L10n.string("Page %d of %d", 1, 4))
     }
 
     func testSearchResultRetentionIsBounded() async throws {

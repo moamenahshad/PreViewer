@@ -2,6 +2,8 @@
 
 # PreViewer, a Mac App!
 
+[العربية](README.ar.md)
+
 PreViewer is a lightweight, native macOS viewer for PDF and DjVu documents. It is designed for reading: open a document, browse its pages, search when text is available, select and copy text, and keep your files unchanged.
 
 The interface follows familiar macOS Preview conventions, including a welcome window, recent documents, page thumbnails, continuous scrolling, zoom controls, native menus, drag and drop, and light and dark appearances.
@@ -18,7 +20,7 @@ The interface follows familiar macOS Preview conventions, including a welcome wi
 
 ## Current release
 
-**PreViewer 0.1.1 Beta** is currently available for Intel-based Macs.
+**PreViewer 0.1.2 Beta** is currently available for Intel-based Macs.
 
 Download the ZIP from the [GitHub Releases page](https://github.com/moamenahshad/PreViewer/releases), open it, and drag `PreViewer.app` to your Applications folder. The beta is not notarized with a paid Apple Developer certificate, so macOS may ask you to confirm the first launch.
 
@@ -34,6 +36,7 @@ Download the ZIP from the [GitHub Releases page](https://github.com/moamenahshad
 - Drag and drop files into the app
 - Native macOS menus, keyboard shortcuts, and context menus
 - Light and dark mode support
+- English and Arabic interface support, including right-to-left layout
 - Read-only document handling: source files are never edited
 - DjVu-to-PDF export with selectable quality and resolution settings
 

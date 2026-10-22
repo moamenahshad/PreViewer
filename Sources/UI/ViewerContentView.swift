@@ -25,6 +25,7 @@ struct ViewerContentView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
         .frame(minWidth: 400, minHeight: 400)
+        .environment(\.layoutDirection, L10n.isArabic ? .rightToLeft : .leftToRight)
         .onAppear { openError = session.openingError }
         .onChange(of: session.openingError) { _, error in openError = error }
         .overlay { if dropTargeted { RoundedRectangle(cornerRadius: 8).stroke(Color.accentColor, lineWidth: 3).allowsHitTesting(false) } }

@@ -286,10 +286,10 @@ final class ViewerDocumentController: NSDocumentController, ObservableObject {
 
     private func presentMissingFile(_ url: URL) {
         let alert = NSAlert()
-        alert.messageText = "Document Not Found"
-        alert.informativeText = "“\(url.lastPathComponent)” may have been moved, renamed, or deleted. You can locate it and open it again."
-        alert.addButton(withTitle: "Locate…")
-        alert.addButton(withTitle: "Cancel")
+        alert.messageText = L10n.string("Document Not Found")
+        alert.informativeText = L10n.string("Document %@ may have been moved, renamed, or deleted. You can locate it and open it again.", url.lastPathComponent)
+        alert.addButton(withTitle: L10n.string("Locate…"))
+        alert.addButton(withTitle: L10n.string("Cancel"))
         guard let window = welcomeController?.window else { return }
         alert.beginSheetModal(for: window) { [weak self] response in
             guard response == .alertFirstButtonReturn else { return }

@@ -6,7 +6,7 @@ final class WelcomeWindowController: NSWindowController {
     init(documents: ViewerDocumentController) {
         let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 620, height: 680),
                               styleMask: [.titled, .closable, .miniaturizable, .resizable], backing: .buffered, defer: false)
-        window.title = "Welcome to PreViewer"
+        window.title = L10n.string("Welcome") + " — PreViewer"
         window.titleVisibility = .hidden
         window.titlebarAppearsTransparent = true
         window.isReleasedWhenClosed = false
@@ -93,6 +93,7 @@ struct WelcomeView: View {
         .padding(28)
         .frame(minWidth: 460, minHeight: 480)
         .background(.background)
+        .environment(\.layoutDirection, L10n.isArabic ? .rightToLeft : .leftToRight)
         .overlay {
             if dropTargeted { RoundedRectangle(cornerRadius: 12).stroke(Color.accentColor, lineWidth: 3).padding(8).allowsHitTesting(false) }
         }
