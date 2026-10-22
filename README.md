@@ -1,12 +1,20 @@
 <img width="76" height="76" alt="PreViewer icon" src="https://github.com/user-attachments/assets/62a7305d-c1c2-4c68-bf42-c1c8ed8e8e97" />
 
-# PreViewer
+# PreViewer, a Mac App!
 
 PreViewer is a lightweight, native macOS viewer for PDF and DjVu documents. It is designed for reading: open a document, browse its pages, search when text is available, select and copy text, and keep your files unchanged.
 
 The interface follows familiar macOS Preview conventions, including a welcome window, recent documents, page thumbnails, continuous scrolling, zoom controls, native menus, drag and drop, and light and dark appearances.
 
-<img width="732" height="824" alt="PreViewer welcome window" src="https://github.com/user-attachments/assets/0d779d16-7ca6-4bb4-bf0a-847a3727630b" />
+# Screenshots
+
+![Welcome window](Documentation/screenshots/welcome-current.png)
+
+![PDF viewer](Documentation/screenshots/PDF-viewer.png)
+
+![DjVu viewer](Documentation/screenshots/djvu-viewer.png)
+
+![DjVu to PDF export](Documentation/screenshots/DjVu-to-PDF-settings.png)
 
 ## Current release
 
