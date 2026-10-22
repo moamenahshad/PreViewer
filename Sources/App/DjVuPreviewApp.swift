@@ -16,6 +16,7 @@ enum DjVuPreviewApp {
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
     let documents: ViewerDocumentController
+    private var settingsController: SettingsWindowController?
     init(documents: ViewerDocumentController) { self.documents = documents; super.init() }
 
     func applicationWillFinishLaunching(_ notification: Notification) {
@@ -23,6 +24,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        AppSettings.shared.applyTheme()
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
 
@@ -52,6 +54,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func showWelcome(_ sender: Any?) {
         documents.showWelcomeIfNeeded()
     }
+    @objc func showSettings(_ sender: Any?) {
+        if settingsController == nil { settingsController = SettingsWindowController() }
+        settingsController?.showWindow(nil)
+        settingsController?.window?.makeKeyAndOrderFront(nil)
+    }
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool { false }
 
     private func makeMenu() -> NSMenu {
@@ -71,6 +78,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         let app = submenu("PreViewer")
         item(app, "About PreViewer", #selector(NSApplication.orderFrontStandardAboutPanel(_:)))
+        item(app, "Settings…", #selector(showSettings(_:)), ",")
         app.addItem(.separator())
         let services = NSMenu(title: L10n.string("Services"))
         let servicesItem = app.addItem(withTitle: L10n.string("Services"), action: nil, keyEquivalent: "")
