@@ -12,7 +12,7 @@ final class ViewerWindowController: NSWindowController, NSMenuItemValidation, NS
     init(session: DocumentSession) {
         self.session = session
         documentSplitViewController = ViewerSplitViewController(session: session)
-        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 1100, height: 800),
+        let window = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 1280, height: 720),
                               styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
                               backing: .buffered, defer: false)
         window.minSize = NSSize(width: 760, height: 560)
