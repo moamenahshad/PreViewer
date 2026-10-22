@@ -119,11 +119,11 @@ private struct DjVuToPDFView: View {
                 }
                 Section("Conversion") {
                     Picker("Quality",selection:$model.options.quality) {
-                        ForEach(DjVuToPDFOptions.Quality.allCases,id:\.self) { Text($0.rawValue).tag($0) }
+                        ForEach(DjVuToPDFOptions.Quality.allCases,id:\.self) { Text(L10n.string($0.rawValue)).tag($0) }
                     }
                     Text("Smaller File: JPEG 55%. Balanced: JPEG 82%. Maximum Quality: lossless raster. Bilevel pages remain lossless at every quality.").font(.caption).foregroundStyle(.secondary)
                     Picker("Image resolution",selection:$model.options.resolution) {
-                        ForEach(DjVuToPDFOptions.Resolution.allCases,id:\.self) { Text($0.rawValue).tag($0) }
+                        ForEach(DjVuToPDFOptions.Resolution.allCases,id:\.self) { Text(L10n.string($0.rawValue)).tag($0) }
                     }
                     Text("Resolution is capped at the source DPI; pages are never upscaled. Unknown DPI retains original pixels and uses 300 DPI for page dimensions.").font(.caption).foregroundStyle(.secondary)
                 }.disabled(model.converting)
@@ -137,12 +137,12 @@ private struct DjVuToPDFView: View {
                 Section("Output") {
                     LabeledContent("Filename",value:model.destination?.lastPathComponent ?? model.proposedName)
                     HStack {
-                        Text(model.destination?.deletingLastPathComponent().path ?? "Choose a PDF destination").font(.callout).textSelection(.enabled).lineLimit(2)
+                        Text(model.destination?.deletingLastPathComponent().path ?? L10n.string("Choose a PDF destination")).font(.callout).textSelection(.enabled).lineLimit(2)
                         Spacer()
                         Button("Choose…",action:choose).disabled(model.converting)
                     }
                     if let estimate = model.estimate {
-                        Text("Based on trial PDF encoding of \(estimate.sampleCount) representative pages. Mixed content and shared font overhead may change the final size.").font(.caption).foregroundStyle(.secondary)
+                        Text(L10n.string("Based on trial PDF encoding of %d representative pages. Mixed content and shared font overhead may change the final size.", estimate.sampleCount)).font(.caption).foregroundStyle(.secondary)
                     }
                 }
                 if let result = model.result {
