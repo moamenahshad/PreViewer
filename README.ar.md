@@ -8,16 +8,6 @@
 
 تتبع الواجهة أسلوب Preview المألوف في macOS، مع نافذة ترحيب، والمستندات الأخيرة، والصور المصغرة، والتمرير المستمر، وأدوات التكبير، والقوائم الأصلية، والسحب والإفلات، والمظهرين الفاتح والداكن.
 
-# لقطات شاشة
-
-![Welcome window](Documentation/screenshots/welcome-current-ar.png)
-
-![PDF viewer](Documentation/screenshots/PDF-viewer-ar.png)
-
-![DjVu viewer](Documentation/screenshots/djvu-viewer-ar.png)
-
-![DjVu to PDF export](Documentation/screenshots/DjVu-to-PDF-settings-ar.png)
-
 ## لقطات الشاشة
 
 ![نافذة الترحيب بالعربية](Documentation/screenshots/welcome-current-ar.png)
